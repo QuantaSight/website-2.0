@@ -14,10 +14,10 @@ const DemoForm = ({ darkMode }) => {
     ];
 
     return (
-        <section className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-white to-gray-50/50'}`}>
-            <div className="max-w-7l mx-auto px-40">
+        <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-white to-gray-50/50'}`}>
+            <div className="main-container">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 sm:mb-16">
                     <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
@@ -37,7 +37,7 @@ const DemoForm = ({ darkMode }) => {
                 </div>
 
                 <div className="max-w-4xl mx-auto">
-                    <div className={`professional-card p-8 transition-all duration-300 shadow-xl hover:shadow-2xl ${
+                    <div className={`professional-card p-6 sm:p-8 transition-all duration-300 shadow-xl hover:shadow-2xl ${
                         darkMode
                             ? 'glass-dark shadow-gray-900/25'
                             : 'glass-card shadow-blue-100/60'

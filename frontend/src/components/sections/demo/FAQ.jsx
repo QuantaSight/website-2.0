@@ -26,10 +26,10 @@ const FAQ = ({ darkMode }) => {
     ];
 
     return (
-        <section className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-gray-50/50 to-white'}`}>
-            <div className="max-w-7l mx-auto px-40">
+        <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-gray-50/50 to-white'}`}>
+            <div className="main-container">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 sm:mb-16">
                     <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
@@ -52,7 +52,7 @@ const FAQ = ({ darkMode }) => {
                     {faqs.map((faq, index) => {
                         const IconComponent = faq.icon;
                         return (
-                            <div key={index} className={`professional-card p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
+                            <div key={index} className={`professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
                                 darkMode
                                     ? 'glass-dark shadow-gray-900/25 hover:shadow-gray-900/40'
                                     : 'glass-card shadow-blue-100/60 hover:shadow-blue-200/70'
@@ -61,14 +61,14 @@ const FAQ = ({ darkMode }) => {
                                     ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                                     : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
                             }}>
-                                <div className="flex items-start space-x-4">
+                                <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4">
                                     <div className={`p-3 rounded-xl shadow-lg transition-all duration-300 flex-shrink-0 ${
                                         darkMode ? 'bg-blue-500/20 shadow-blue-500/20' : 'bg-blue-50 shadow-blue-200/30'
                                     }`}>
                                         <IconComponent className={`w-5 h-5 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className={`text-lg font-bold mb-3 ${
+                                        <h3 className={`text-base sm:text-lg font-bold mb-3 ${
                                             darkMode ? 'text-white' : 'text-gray-800'
                                         }`}>
                                             {faq.question}

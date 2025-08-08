@@ -6,10 +6,10 @@ const FeaturedBlog = ({ darkMode, blog, onReadMore }) => {
     if (!blog) return null;
 
     return (
-        <section className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-white to-gray-50/50'}`}>
-            <div className="max-w-7l mx-auto px-40">
+        <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-white to-gray-50/50'}`}>
+            <div className="main-container">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 sm:mb-16">
                     <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
@@ -37,9 +37,9 @@ const FeaturedBlog = ({ darkMode, blog, onReadMore }) => {
                         ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                         : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
                 }}>
-                    <div className="md:flex">
-                        <div className="md:w-1/2">
-                            <div className="relative overflow-hidden h-64 md:h-full">
+                    <div className="flex flex-col lg:flex-row">
+                        <div className="lg:w-1/2">
+                            <div className="relative overflow-hidden h-64 sm:h-80 lg:h-full">
                                 <img
                                     src={blog.image || blog.featured_image || "/api/placeholder/600/400"}
                                     alt={blog.title}
@@ -54,8 +54,8 @@ const FeaturedBlog = ({ darkMode, blog, onReadMore }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="md:w-1/2 p-8">
-                            <h2 className={`text-2xl font-bold mb-4 leading-tight ${
+                        <div className="lg:w-1/2 p-6 sm:p-8">
+                            <h2 className={`text-xl sm:text-2xl font-bold mb-4 leading-tight ${
                                 darkMode ? 'text-white' : 'text-gray-800'
                             }`}>
                                 {blog.title}
@@ -68,7 +68,7 @@ const FeaturedBlog = ({ darkMode, blog, onReadMore }) => {
 
                             {/* Author info */}
                             <div className="flex items-center mb-6">
-                                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4 shadow-lg">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4 shadow-lg">
                                     {blog.author.charAt(0)}
                                 </div>
                                 <div className="flex-1">
@@ -86,7 +86,7 @@ const FeaturedBlog = ({ darkMode, blog, onReadMore }) => {
                             </div>
 
                             {/* Meta info */}
-                            <div className="flex items-center gap-4 mb-6">
+                            <div className="flex flex-wrap items-center gap-4 mb-6">
                                 <div className="flex items-center">
                                     <Calendar className={`w-4 h-4 mr-1 ${
                                         darkMode ? 'text-gray-400' : 'text-gray-500'

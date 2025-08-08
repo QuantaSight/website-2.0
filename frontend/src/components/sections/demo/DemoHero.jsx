@@ -3,7 +3,7 @@ import { Calendar, Users, Zap } from 'lucide-react';
 
 const DemoHero = ({ darkMode }) => {
     return (
-        <section className={`py-16 md:py-20 pt-10 md:pt-14 relative overflow-hidden ${
+        <section className={`py-12 md:py-16 lg:py-20 relative overflow-hidden ${
             darkMode ? 'bg-gradient-to-br from-gray-900 to-gray-800' : 'bg-gradient-to-br from-blue-50/50 to-indigo-100/30'
         }`} style={{
             boxShadow: darkMode
@@ -17,17 +17,17 @@ const DemoHero = ({ darkMode }) => {
                 }} />
             </div>
 
-            <div className="max-w-7l mx-auto px-40 relative">
+            <div className="main-container relative">
                 <div className="max-w-4xl mx-auto text-center">
                     {/* Demo badge */}
-                    <div className={`inline-flex items-center px-4 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
+                    <div className={`inline-flex items-center px-3 sm:px-4 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
                         <Calendar className="w-3 h-3 mr-2" />
                         Schedule Your Demo
                     </div>
 
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                         <span className={`${darkMode ? 'text-white' : 'text-gray-800'}`}>
                             Experience
                         </span>
@@ -37,7 +37,7 @@ const DemoHero = ({ darkMode }) => {
                         </span>
                     </h1>
 
-                    <p className={`text-base md:text-lg mb-8 leading-relaxed ${
+                    <p className={`text-sm sm:text-base md:text-lg mb-8 leading-relaxed ${
                         darkMode ? 'text-gray-300' : 'text-gray-600'
                     } max-w-2xl mx-auto`}>
                         Schedule a personalized demonstration to see how our platform can transform your workflow and accelerate your research capabilities
@@ -45,30 +45,30 @@ const DemoHero = ({ darkMode }) => {
 
                     {/* Enhanced Key benefits */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-2xl mx-auto">
-                        <div className={`p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
+                        <div className={`p-4 sm:p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
                             darkMode
                                 ? 'glass-dark shadow-gray-900/20'
                                 : 'glass-light shadow-blue-100/40'
                         }`}>
-                            <Calendar className="w-6 h-6 text-blue-600 mb-3 drop-shadow-sm mx-auto" />
+                            <Calendar className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 mb-3 drop-shadow-sm mx-auto" />
                             <div className="text-sm font-medium mb-1">45-60 Minutes</div>
                             <div className="text-xs text-gray-500">Personalized Demo</div>
                         </div>
-                        <div className={`p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
+                        <div className={`p-4 sm:p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
                             darkMode
                                 ? 'glass-dark shadow-gray-900/20'
                                 : 'glass-light shadow-blue-100/40'
                         }`}>
-                            <Users className="w-6 h-6 text-green-600 mb-3 drop-shadow-sm mx-auto" />
+                            <Users className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 mb-3 drop-shadow-sm mx-auto" />
                             <div className="text-sm font-medium mb-1">Live Interactive</div>
                             <div className="text-xs text-gray-500">Hands-on Experience</div>
                         </div>
-                        <div className={`p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
+                        <div className={`p-4 sm:p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
                             darkMode
                                 ? 'glass-dark shadow-gray-900/20'
                                 : 'glass-light shadow-blue-100/40'
                         }`}>
-                            <Zap className="w-6 h-6 text-purple-600 mb-3 drop-shadow-sm mx-auto" />
+                            <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 mb-3 drop-shadow-sm mx-auto" />
                             <div className="text-sm font-medium mb-1">Free of Charge</div>
                             <div className="text-xs text-gray-500">No Obligation</div>
                         </div>

@@ -4,10 +4,10 @@ import { MessageSquare } from 'lucide-react';
 
 const DemoTestimonials = ({ darkMode }) => {
     return (
-        <section className={`py-20 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
-            <div className="max-w-7l mx-auto px-40">
+        <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+            <div className="main-container">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-12 sm:mb-16">
                     <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
@@ -26,7 +26,7 @@ const DemoTestimonials = ({ darkMode }) => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                     {/* Testimonial 1 */}
                     <div className={`professional-card transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
                         darkMode
@@ -37,9 +37,9 @@ const DemoTestimonials = ({ darkMode }) => {
                             ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                             : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
                     }}>
-                        <div className="p-6">
+                        <div className="p-5 sm:p-6">
                             <div className="mb-6">
-                                <svg className={`w-8 h-8 mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} fill="currentColor" viewBox="0 0 24 24">
+                                <svg className={`w-6 h-6 sm:w-8 sm:h-8 mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
                                 </svg>
                                 <p className={`text-sm leading-relaxed italic mb-4 ${
@@ -49,7 +49,7 @@ const DemoTestimonials = ({ darkMode }) => {
                                 </p>
                             </div>
                             <div className="flex items-center">
-                                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm mr-3 shadow-lg shadow-purple-500/30">
                                     D
                                 </div>
                                 <div>
@@ -74,9 +74,9 @@ const DemoTestimonials = ({ darkMode }) => {
                             ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                             : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
                     }}>
-                        <div className="p-6">
+                        <div className="p-5 sm:p-6">
                             <div className="mb-6">
-                                <svg className={`w-8 h-8 mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} fill="currentColor" viewBox="0 0 24 24">
+                                <svg className={`w-6 h-6 sm:w-8 sm:h-8 mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
                                 </svg>
                                 <p className={`text-sm leading-relaxed italic mb-4 ${
@@ -86,7 +86,7 @@ const DemoTestimonials = ({ darkMode }) => {
                                 </p>
                             </div>
                             <div className="flex items-center">
-                                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm mr-3 shadow-lg shadow-purple-500/30">
                                     L
                                 </div>
                                 <div>
@@ -111,9 +111,9 @@ const DemoTestimonials = ({ darkMode }) => {
                             ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                             : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
                     }}>
-                        <div className="p-6">
+                        <div className="p-5 sm:p-6">
                             <div className="mb-6">
-                                <svg className={`w-8 h-8 mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} fill="currentColor" viewBox="0 0 24 24">
+                                <svg className={`w-6 h-6 sm:w-8 sm:h-8 mb-4 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
                                 </svg>
                                 <p className={`text-sm leading-relaxed italic mb-4 ${
@@ -123,7 +123,7 @@ const DemoTestimonials = ({ darkMode }) => {
                                 </p>
                             </div>
                             <div className="flex items-center">
-                                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xs sm:text-sm mr-3 shadow-lg shadow-purple-500/30">
                                     M
                                 </div>
                                 <div>
