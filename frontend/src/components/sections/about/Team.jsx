@@ -68,46 +68,44 @@ const Team = ({ darkMode }) => {
                     </p>
                 </div>
 
-                {/* Team Grid */}
-                <div className="max-w-5xl mx-auto">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
-                        <TeamMember
-                            name="Dr. Sameer Trikha"
-                            title="Founder & CEO"
-                            image={founder}
-                            location="London, UK"
-                            linkdin="https://www.linkedin.com/in/sameer-trikha-1b987154/"
-                            twitter="https://x.com/SameerTrikha"
-                        TeamLead= "Founder"
-                        />
-                        <TeamMember
-                            name="Ayush Mishra"
-                            title="Chief Technology Officer"
-                            image={cto}
-                            location="Remote"
-                            linkdin="https://www.linkedin.com/in/ayush-mishra-b8882712b/"
-                            twitter="https://www.linkedin.com/in/ayush-mishra-b8882712b/"
-                            TeamLead="CTO"
-                        />
-                        <TeamMember
-                            name="Bhargav Sri Sai"
-                            title="AI Research Lead"
-                            image="/api/placeholder/200/200"
-                            location="Remote"
-                            linkdin="https://www.linkedin.com/in/bhargav-sri-sai-147331204/"
-                            twitter="https://www.linkedin.com/in/bhargav-sri-sai-147331204/"
-                            TeamLead="AI Research"
-                        />
-                        <TeamMember
-                            name="Kevin Patel"
-                            title="Software Developer"
-                            image="/api/placeholder/200/200"
-                            location="Remote"
-                            linkdin="https://www.linkedin.com/in/kevin222004/"
-                            twitter="https://x.com/KevinPatel2004"
-                            TeamLead="Software Devloper"
-                        />
-                    </div>
+                {/* Team Grid - Increased spacing between cards */}
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12">
+                    <TeamMember
+                        name="Dr. Sameer Trikha"
+                        title="Founder & CEO"
+                        image={founder}
+                        location="London, UK"
+                        linkdin="https://www.linkedin.com/in/sameer-trikha-1b987154/"
+                        twitter="https://x.com/SameerTrikha"
+                        TeamLead="Founder"
+                    />
+                    <TeamMember
+                        name="Ayush Mishra"
+                        title="Chief Technology Officer"
+                        image={cto}
+                        location="Remote"
+                        linkdin="https://www.linkedin.com/in/ayush-mishra-b8882712b/"
+                        twitter="https://www.linkedin.com/in/ayush-mishra-b8882712b/"
+                        TeamLead="CTO"
+                    />
+                    <TeamMember
+                        name="Bhargav Sri Sai"
+                        title="AI Research Lead"
+                        image="/api/placeholder/200/200"
+                        location="Remote"
+                        linkdin="https://www.linkedin.com/in/bhargav-sri-sai-147331204/"
+                        twitter="https://www.linkedin.com/in/bhargav-sri-sai-147331204/"
+                        TeamLead="AI Research"
+                    />
+                    <TeamMember
+                        name="Kevin Patel"
+                        title="Software Developer"
+                        image="/api/placeholder/200/200"
+                        location="Remote"
+                        linkdin="https://www.linkedin.com/in/kevin222004/"
+                        twitter="https://x.com/KevinPatel2004"
+                        TeamLead="Software Developer"
+                    />
                 </div>
             </div>
         </section>
