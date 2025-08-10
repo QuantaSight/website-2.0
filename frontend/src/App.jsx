@@ -10,6 +10,7 @@ import WorkroomPage from './pages/WorkroomPage';
 import BlogsPage from './pages/BlogsPage';
 import DemoPage from './pages/DemoPage';
 import LoginPage from './pages/LoginPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import './styles/globals.css';
 import './styles/animations.css';
 
@@ -27,6 +28,7 @@ const App = () => {
                         <Route path="/blogs" element={<BlogsPage />} />
                         <Route path="/demo" element={<DemoPage />} />
                         <Route path="/login" element={<LoginPage />} />
+                        <Route path="/privacy" element={<PrivacyPolicyPage />} />
                         {/* Catch all route - redirect to home */}
                         <Route path="*" element={<HomePage />} />
                     </Routes>

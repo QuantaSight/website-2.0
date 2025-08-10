@@ -50,14 +50,6 @@ const AboutHero = ({ darkMode }) => {
                             ? 'glass-dark shadow-gray-900/20 hover:shadow-gray-900/30'
                             : 'glass-light shadow-blue-100/40 hover:shadow-blue-200/50'
                     }`}>
-                        <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-2 drop-shadow-sm">500+</div>
-                        <div className="text-xs text-gray-500">Active Researchers</div>
-                    </div>
-                    <div className={`text-center p-4 sm:p-6 rounded-lg transition-all hover:scale-105 shadow-lg hover:shadow-xl ${
-                        darkMode
-                            ? 'glass-dark shadow-gray-900/20 hover:shadow-gray-900/30'
-                            : 'glass-light shadow-blue-100/40 hover:shadow-blue-200/50'
-                    }`}>
                         <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-2 drop-shadow-sm">15+</div>
                         <div className="text-xs text-gray-500">Countries Served</div>
                     </div>
@@ -112,14 +104,6 @@ const AboutHero = ({ darkMode }) => {
                         <div className="flex items-center">
                             <Award className="w-4 h-4 mr-2 text-green-500 drop-shadow-sm" />
                             ISO 27001 Certified
-                        </div>
-                        <div className="flex items-center">
-                            <Award className="w-4 h-4 mr-2 text-green-500 drop-shadow-sm" />
-                            ISO 13485 Certified
-                        </div>
-                        <div className="flex items-center">
-                            <Users className="w-4 h-4 mr-2 text-blue-500 drop-shadow-sm" />
-                            SOC 2 Type II
                         </div>
                     </div>
                 </div>

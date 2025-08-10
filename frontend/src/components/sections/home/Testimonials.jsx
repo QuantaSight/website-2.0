@@ -65,26 +65,26 @@ const TestimonialCard = ({ quote, author, title, company, rating = 5 }) => {
 const Testimonials = ({ darkMode }) => {
     const testimonials = [
         {
-            quote: "QuantaSight has revolutionized our medical affairs workflow. What used to take our team weeks of literature review now takes hours. The AI-powered insights are remarkably accurate and have accelerated our drug development timeline significantly.",
-            author: "Dr. Sarah Chen",
-            title: "VP of Medical Affairs",
-            company: "BioPharma Global",
-            rating: 5
+            quote: "QuantaSight gives us faster access to scientific insights, improves our KOL management, and saves our teams hours every week",
+            author: "From a Global Medical Affairs Director",
+            title: "Medical Affairs",
+            // company: "BioPharma Global",
+            // rating: 5
         },
         {
-            quote: "The pharmacovigilance capabilities are outstanding. Atlas has improved our signal detection by 60% and reduced false positives dramatically. It's become an essential tool for our safety monitoring operations.",
-            author: "James Wilson",
-            title: "Head of Drug Safety",
-            company: "Therapeutic Solutions Inc.",
-            rating: 5
+            quote: "This platform is so impressive. The scientific evaluation is accurate, and I'm able to identify potential key opinion leaders in seconds rather than hours. It literally saves my team days of work!",
+            author: "Head of global medical affairs",
+            title: "Medical Affairs",
+            company: "multinational Ophthalmic Pharmaceutical company.",
+            // rating: 5
         },
-        {
-            quote: "The collaboration features in Workroom have transformed how our global teams work together. We can now create regulatory documents in multiple formats simultaneously, saving countless hours of manual work.",
-            author: "Dr. Maria Rodriguez",
-            title: "Director of Regulatory Affairs",
-            company: "MedTech Innovations",
-            rating: 5
-        }
+        // {
+        //     quote: "The collaboration features in Workroom have transformed how our global teams work together. We can now create regulatory documents in multiple formats simultaneously, saving countless hours of manual work.",
+        //     author: "Dr. Maria Rodriguez",
+        //     title: "Director of Regulatory Affairs",
+        //     company: "MedTech Innovations",
+        //     rating: 5
+        // }
     ];
 
     return (

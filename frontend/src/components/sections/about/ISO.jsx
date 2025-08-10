@@ -83,44 +83,6 @@ const ISO = ({ darkMode }) => {
                                     }`}>Information Security Management</div>
                                 </div>
                             </div>
-
-                            {/* ISO 13485 */}
-                            <div className={`p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
-                                darkMode ? 'bg-gray-700/50 shadow-gray-900/20' : 'bg-white shadow-blue-100/30'
-                            }`}>
-                                <div className="flex flex-col items-center text-center">
-                                    <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 shadow-lg ${
-                                        darkMode ? 'bg-green-500/20' : 'bg-green-50'
-                                    }`}>
-                                        <div className="text-green-600 font-bold text-sm sm:text-lg">ISO</div>
-                                    </div>
-                                    <div className={`font-bold mb-1 text-sm sm:text-base ${
-                                        darkMode ? 'text-white' : 'text-gray-800'
-                                    }`}>ISO 13485</div>
-                                    <div className={`text-xs ${
-                                        darkMode ? 'text-gray-400' : 'text-gray-600'
-                                    }`}>Medical Device Quality Management</div>
-                                </div>
-                            </div>
-
-                            {/* SOC 2 */}
-                            <div className={`p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 sm:col-span-2 lg:col-span-1 ${
-                                darkMode ? 'bg-gray-700/50 shadow-gray-900/20' : 'bg-white shadow-blue-100/30'
-                            }`}>
-                                <div className="flex flex-col items-center text-center">
-                                    <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 shadow-lg ${
-                                        darkMode ? 'bg-purple-500/20' : 'bg-purple-50'
-                                    }`}>
-                                        <Award className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600" />
-                                    </div>
-                                    <div className={`font-bold mb-1 text-sm sm:text-base ${
-                                        darkMode ? 'text-white' : 'text-gray-800'
-                                    }`}>SOC 2 Type II</div>
-                                    <div className={`text-xs ${
-                                        darkMode ? 'text-gray-400' : 'text-gray-600'
-                                    }`}>Security & Operational Controls</div>
-                                </div>
-                            </div>
                         </div>
 
                         {/* Additional Compliance */}

@@ -27,7 +27,7 @@ const SearchCapabilities = ({ darkMode }) => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left side - Features */}
-                    <div className="space-y-6">
+                    <div className="space-y-10">
                         {/* Boolean Operators Card */}
                         <div className={`professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
                             darkMode

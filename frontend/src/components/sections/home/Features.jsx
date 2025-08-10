@@ -93,14 +93,6 @@ const Features = ({ darkMode }) => {
                             <div className="w-2 h-2 bg-green-500 rounded-full mr-2 shadow-lg shadow-green-500/50"></div>
                             ISO 27001 Certified
                         </div>
-                        <div className="flex items-center">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mr-2 shadow-lg shadow-green-500/50"></div>
-                            HIPAA Compliant
-                        </div>
-                        <div className="flex items-center">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mr-2 shadow-lg shadow-green-500/50"></div>
-                            SOC 2 Type II
-                        </div>
                     </div>
                 </div>
             </div>

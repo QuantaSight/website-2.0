@@ -95,15 +95,7 @@ const AtlasFeatures = ({ darkMode }) => {
                             <div className="text-sm font-medium mb-1">Scientific Literature</div>
                             <div className="text-xs text-gray-500">PubMed, Clinical Journals</div>
                         </div>
-                        <div className="flex flex-col items-center">
-                            <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mb-3 ${
-                                darkMode ? 'bg-green-500/20' : 'bg-green-100'
-                            }`}>
-                                <MessageSquare className={`w-5 h-5 sm:w-6 sm:h-6 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
-                            </div>
-                            <div className="text-sm font-medium mb-1">Social Media</div>
-                            <div className="text-xs text-gray-500">Patient Forums, Twitter</div>
-                        </div>
+
                         <div className="flex flex-col items-center">
                             <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mb-3 ${
                                 darkMode ? 'bg-purple-500/20' : 'bg-purple-100'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRight, FileText, Users, Beaker, Building2 } from 'lucide-react';
+import { Check, FileText, Users, Beaker, Building2 } from 'lucide-react';
 
 const XtractFeatures = ({ darkMode }) => {
     return (
@@ -46,19 +46,19 @@ const XtractFeatures = ({ darkMode }) => {
                         </div>
                         <ul className="space-y-4">
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">All paper related details with advanced search capabilities</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">AI-powered summarization of complex scientific papers</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Critical evaluation of methodologies and results</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Discovery of similar papers and research trends</span>
                             </li>
                         </ul>
@@ -84,19 +84,19 @@ const XtractFeatures = ({ darkMode }) => {
                         </div>
                         <ul className="space-y-4">
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Comprehensive profiles of related authors and researchers</span>
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <span className="text-sm leading-relaxed">No more guesswork or hours of research</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Publication history and citation analysis</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Institutional affiliations and research networks</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Transparency in payment and collaboration data</span>
                             </li>
                         </ul>
@@ -122,19 +122,19 @@ const XtractFeatures = ({ darkMode }) => {
                         </div>
                         <ul className="space-y-4">
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Up-to-date access to treatment guidelines across specialties</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Comprehensive clinical trial information and status</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">AI summaries of complex protocol documents</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Competitive landscape analysis of ongoing trials</span>
                             </li>
                         </ul>
@@ -160,19 +160,19 @@ const XtractFeatures = ({ darkMode }) => {
                         </div>
                         <ul className="space-y-4">
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">KOL relationships and collaboration networks</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Drug development pipeline and competitive analysis</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Research focus areas and emerging interests</span>
                             </li>
                             <li className="flex items-start">
-                                <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
+                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                 <span className="text-sm leading-relaxed">Strategic partnership and investment activities</span>
                             </li>
                         </ul>

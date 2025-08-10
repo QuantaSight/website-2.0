@@ -91,11 +91,10 @@ const Footer = () => {
 
                         <FooterLinkGroup title="Resources">
                             <FooterLink title="Blog" to="/blogs"/>
-                            <FooterLink title="Case Studies" to="/blogs"/>
                         </FooterLinkGroup>
 
                         <FooterLinkGroup title="Legal">
-                            <FooterLink title="Privacy Policy" to="/about"/>
+                            <FooterLink title="Privacy Policy" to="/privacy"/>
                         </FooterLinkGroup>
                     </div>
                 </div>

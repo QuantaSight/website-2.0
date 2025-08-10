@@ -9,23 +9,39 @@ import logo from '../../assets/images/qs_logo_small.png';
 import qs_name_nobg from '../../assets/images/qs_name_nobg.png';
 import qs_light_logo from '../../assets/images/qs_light_logo.png';
 
-// Updated NavLink component - keeping original font colors
-const NavLink = ({ title, icon, to, isButton }) => {
+// Updated NavLink component - now handles external URLs
+const NavLink = ({ title, icon, to, isButton, external = false }) => {
     const location = useLocation();
-    const isActive = location.pathname === to || (to === '/' && location.pathname === '/');
+    const isActive = !external && (location.pathname === to || (to === '/' && location.pathname === '/'));
+
+    const className = `
+        flex items-center space-x-1 px-3 py-2 rounded-md transition-colors relative
+        ${isButton
+        ? 'bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium'
+        : isActive
+            ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20'
+            : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+    }
+    `;
+
+    if (external) {
+        return (
+            <a
+                href={to}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+            >
+                {icon}
+                <span className="text-sm">{title}</span>
+            </a>
+        );
+    }
 
     return (
         <Link
             to={to}
-            className={`
-                flex items-center space-x-1 px-3 py-2 rounded-md transition-colors relative
-                ${isButton
-                ? 'bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium'
-                : isActive
-                    ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-            }
-            `}
+            className={className}
         >
             {icon}
             <span className="text-sm">{title}</span>
@@ -36,24 +52,41 @@ const NavLink = ({ title, icon, to, isButton }) => {
     );
 };
 
-// Updated MobileNavLink component - keeping original font colors
-const MobileNavLink = ({ title, icon, to, isButton, onClick }) => {
+// Updated MobileNavLink component - now handles external URLs
+const MobileNavLink = ({ title, icon, to, isButton, onClick, external = false }) => {
     const location = useLocation();
-    const isActive = location.pathname === to || (to === '/' && location.pathname === '/');
+    const isActive = !external && (location.pathname === to || (to === '/' && location.pathname === '/'));
+
+    const className = `
+        flex items-center space-x-2 px-4 py-3 rounded-md transition-colors w-full relative text-sm
+        ${isButton
+        ? 'bg-blue-600 hover:bg-blue-700 text-white font-medium'
+        : isActive
+            ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600'
+            : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+    }
+    `;
+
+    if (external) {
+        return (
+            <a
+                href={to}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={onClick}
+                className={className}
+            >
+                {icon && icon}
+                <span>{title}</span>
+            </a>
+        );
+    }
 
     return (
         <Link
             to={to}
             onClick={onClick}
-            className={`
-                flex items-center space-x-2 px-4 py-3 rounded-md transition-colors w-full relative text-sm
-                ${isButton
-                ? 'bg-blue-600 hover:bg-blue-700 text-white font-medium'
-                : isActive
-                    ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-700'
-            }
-            `}
+            className={className}
         >
             {icon && icon}
             <span>{title}</span>
@@ -223,7 +256,8 @@ const Header = ({ activeSection }) => {
                         <NavLink
                             title="Login"
                             icon={<LogIn size={14} />}
-                            to="/login"
+                            to="https://quantasight.com"
+                            external={true}
                         />
                     </nav>
 
@@ -316,8 +350,9 @@ const Header = ({ activeSection }) => {
                             <MobileNavLink
                                 title="Login"
                                 icon={<LogIn size={16} />}
-                                to="/login"
+                                to="https://quantasight.com"
                                 onClick={closeMobileMenu}
+                                external={true}
                             />
                         </nav>
                     </div>

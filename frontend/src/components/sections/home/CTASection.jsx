@@ -43,10 +43,8 @@ const CTASection = ({ darkMode }) => {
 
                                 {/* Features list */}
                                 <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-6 text-xs sm:text-sm">
-                                    <div className="flex items-center justify-center lg:justify-start">
-                                        <Shield className="w-4 h-4 text-green-500 mr-2 drop-shadow-sm" />
-                                        <span>HIPAA Compliant</span>
-                                    </div>
+
+
                                     <div className="flex items-center justify-center lg:justify-start">
                                         <Clock className="w-4 h-4 text-green-500 mr-2 drop-shadow-sm" />
                                         <span>30-min Demo</span>
