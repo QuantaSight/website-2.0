@@ -20,7 +20,7 @@ const NavLink = ({ title, icon, to, isButton, external = false }) => {
         ? 'bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium'
         : isActive
             ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20'
-            : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+            : 'hover:bg-blue-50 dark:hover:bg-blue-900/20'
     }
     `;
 
@@ -63,7 +63,7 @@ const MobileNavLink = ({ title, icon, to, isButton, onClick, external = false })
         ? 'bg-blue-600 hover:bg-blue-700 text-white font-medium'
         : isActive
             ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600'
-            : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+            : 'hover:bg-blue-50 dark:hover:bg-blue-900/20'
     }
     `;
 
@@ -107,7 +107,7 @@ const DropdownItem = ({ title, description, to, onClick }) => {
                 w-full text-left px-4 py-3 transition-colors block
                 ${isActive
                 ? 'bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600 text-blue-600'
-                : 'hover:bg-gray-100 dark:hover:bg-gray-700'
+                : 'hover:bg-blue-50 dark:hover:bg-blue-900/20'
             }
             `}
         >
@@ -204,7 +204,7 @@ const Header = ({ activeSection }) => {
                         <div className="relative" ref={modulesRef}>
                             <button
                                 className={`
-                                    flex items-center space-x-1 px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors relative text-sm
+                                    flex items-center space-x-1 px-3 py-2 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors relative text-sm
                                     ${isModulesActive ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20' : ''}
                                 `}
                                 onClick={() => toggleDropdown('modules')}
@@ -265,14 +265,14 @@ const Header = ({ activeSection }) => {
                     <div className="flex items-center space-x-3">
                         <button
                             onClick={toggleDarkMode}
-                            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                            className="p-2 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
                             aria-label="Toggle dark mode"
                         >
                             {darkMode ? <Sun size={18} /> : <Moon size={18} />}
                         </button>
 
                         <button
-                            className="lg:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
+                            className="lg:hidden p-2 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/20"
                             onClick={toggleMobileMenu}
                             aria-label="Toggle mobile menu"
                         >
@@ -304,7 +304,7 @@ const Header = ({ activeSection }) => {
                             <div>
                                 <button
                                     className={`
-                                        w-full flex items-center justify-between px-4 py-3 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-sm
+                                        w-full flex items-center justify-between px-4 py-3 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors text-sm
                                         ${isModulesActive ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600' : ''}
                                     `}
                                     onClick={() => toggleDropdown('modules')}
