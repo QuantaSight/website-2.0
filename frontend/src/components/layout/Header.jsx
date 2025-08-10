@@ -7,6 +7,7 @@ import {
 import { useTheme } from '../../context/ThemeContext';
 import logo from '../../assets/images/qs_logo_small.png';
 import qs_name_nobg from '../../assets/images/qs_name_nobg.png';
+import qs_light_logo from '../../assets/images/qs_light_logo.png';
 
 // Updated NavLink component - keeping original font colors
 const NavLink = ({ title, icon, to, isButton }) => {
@@ -145,7 +146,11 @@ const Header = ({ activeSection }) => {
                             <img src={logo} alt="Logo" className="h-full w-auto object-contain" />
                         </span>
                         <span className="h-6 md:h-8 flex items-center">
-                            <img src={qs_name_nobg} alt="QuantaSight" className="h-full w-auto object-contain" />
+                            <img
+                                src={darkMode ? qs_name_nobg : qs_light_logo}
+                                alt="QuantaSight"
+                                className="h-full w-auto object-contain"
+                            />
                         </span>
                     </Link>
 

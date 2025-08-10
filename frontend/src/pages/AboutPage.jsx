@@ -12,7 +12,7 @@ const AboutPage = () => {
     return (
         <div>
             <AboutHero darkMode={darkMode} />
-            <Founder darkMode={darkMode} />
+            {/*<Founder darkMode={darkMode} />*/}
             <MissionVision darkMode={darkMode} />
             <Team darkMode={darkMode} />
             <ISO darkMode={darkMode} />

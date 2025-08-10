@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import logo from "../../assets/images/qs_logo_small.png";
 import qs_name_nobg from "../../assets/images/qs_name_nobg.png";
+import qs_light_logo from "../../assets/images/qs_light_logo.png";
 
 // Improved Footer Link Group Component
 const FooterLinkGroup = ({ title, children }) => {
@@ -59,7 +60,11 @@ const Footer = () => {
                                 <img src={logo} alt="Logo" className="h-full w-auto object-contain"/>
                             </span>
                             <span className="h-6 sm:h-8 flex items-center">
-                                <img src={qs_name_nobg} alt="QuantaSight" className="h-full w-auto object-contain"/>
+                                 <img
+                                     src={darkMode ? qs_name_nobg : qs_light_logo}
+                                     alt="QuantaSight"
+                                     className="h-full w-auto object-contain"
+                                 />
                             </span>
                         </Link>
                         <p className={`text-sm ${
@@ -73,7 +78,6 @@ const Footer = () => {
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center lg:text-left">
                         <FooterLinkGroup title="Company">
                             <FooterLink title="About Us" to="/about"/>
-                            <FooterLink title="Careers" to="/about"/>
                             <FooterLink title="Contact" to="/demo"/>
                             <FooterLink title="ISO Certification" to="/about"/>
                         </FooterLinkGroup>

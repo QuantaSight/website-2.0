@@ -5,7 +5,7 @@ import founder from "../../../assets/images/Founder.png";
 import cto from "../../../assets/images/cto.png";
 
 // Enhanced TeamMember component with professional styling
-const TeamMember = ({ name, title, image, linkdin, twitter, location }) => {
+const TeamMember = ({ name, title, image, linkdin, twitter, location, TeamLead }) => {
     return (
         <div className={`professional-card p-5 sm:p-6 text-center group transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl`} style={{
             boxShadow: '0 8px 20px -6px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6)'
@@ -21,7 +21,7 @@ const TeamMember = ({ name, title, image, linkdin, twitter, location }) => {
                 </div>
                 {/* Professional badge */}
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 px-2 py-1 glass-light rounded-full text-xs font-medium text-blue-700 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    Team Lead
+                    {TeamLead}
                 </div>
             </div>
 
@@ -78,6 +78,7 @@ const Team = ({ darkMode }) => {
                             location="London, UK"
                             linkdin="https://www.linkedin.com/in/sameer-trikha-1b987154/"
                             twitter="https://x.com/SameerTrikha"
+                        TeamLead= "Founder"
                         />
                         <TeamMember
                             name="Ayush Mishra"
@@ -86,6 +87,7 @@ const Team = ({ darkMode }) => {
                             location="Remote"
                             linkdin="https://www.linkedin.com/in/ayush-mishra-b8882712b/"
                             twitter="https://www.linkedin.com/in/ayush-mishra-b8882712b/"
+                            TeamLead="CTO"
                         />
                         <TeamMember
                             name="Bhargav Sri Sai"
@@ -94,14 +96,16 @@ const Team = ({ darkMode }) => {
                             location="Remote"
                             linkdin="https://www.linkedin.com/in/bhargav-sri-sai-147331204/"
                             twitter="https://www.linkedin.com/in/bhargav-sri-sai-147331204/"
+                            TeamLead="AI Research"
                         />
                         <TeamMember
                             name="Kevin Patel"
-                            title="Senior Developer"
+                            title="Software Developer"
                             image="/api/placeholder/200/200"
                             location="Remote"
                             linkdin="https://www.linkedin.com/in/kevin222004/"
                             twitter="https://x.com/KevinPatel2004"
+                            TeamLead="Software Devloper"
                         />
                     </div>
                 </div>
