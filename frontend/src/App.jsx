@@ -5,6 +5,7 @@ import MainLayout from './components/layout/MainLayout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import XtractPage from './pages/XtractPage';
+import AiCrmPage from './pages/AiCrmPage'; // New import
 import AtlasPage from './pages/AtlasPage';
 import WorkroomPage from './pages/WorkroomPage';
 import BlogsPage from './pages/BlogsPage';
@@ -23,6 +24,7 @@ const App = () => {
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/xtract" element={<XtractPage />} />
+                        <Route path="/ai-crm" element={<AiCrmPage />} /> {/* New route */}
                         <Route path="/atlas" element={<AtlasPage />} />
                         <Route path="/workroom" element={<WorkroomPage />} />
                         <Route path="/blogs" element={<BlogsPage />} />

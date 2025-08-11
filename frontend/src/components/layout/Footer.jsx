@@ -86,7 +86,7 @@ const Footer = () => {
                             <FooterLink title="Xtract" to="/xtract"/>
                             <FooterLink title="Atlas" to="/atlas"/>
                             <FooterLink title="Workroom" to="/workroom"/>
-                            <FooterLink title="CRM Dashboard" to="/demo"/>
+                            <FooterLink title="CRM Dashboard" to="/ai-crm"/>
                         </FooterLinkGroup>
 
                         <FooterLinkGroup title="Resources">

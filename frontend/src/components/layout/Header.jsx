@@ -237,6 +237,12 @@ const Header = ({ activeSection }) => {
                                             to="/workroom"
                                             onClick={closeDropdowns}
                                         />
+                                        <DropdownItem
+                                            title="AI CRM"
+                                            description="Kol Managment"
+                                            to="/ai-crm"
+                                            onClick={closeDropdowns}
+                                        />
                                     </div>
                                 </div>
                             )}
