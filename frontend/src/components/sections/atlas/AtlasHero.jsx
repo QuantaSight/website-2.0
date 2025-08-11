@@ -91,11 +91,11 @@ const AtlasHero = ({ darkMode }) => {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <PrimaryButton to="/demo">
-                                Request Demo
-                                <ArrowRight className="w-4 h-4 ml-2" />
+        <span className="inline-flex items-center">
+            Request Demo
+            <ArrowRight className="w-4 h-4 ml-2" />
+        </span>
                             </PrimaryButton>
-
-
                         </div>
                     </div>
 

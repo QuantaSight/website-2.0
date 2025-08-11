@@ -6,11 +6,11 @@ import { FileText } from 'lucide-react';
 const DemoForm = ({ darkMode }) => {
     // Demo form options
     const interestOptions = [
+        { value: 'full', label: 'Full Platform Demo' },
         { value: 'xtract', label: 'Xtract - Scientific Research & Analysis' },
         { value: 'atlas', label: 'Atlas - Pharmacovigilance Monitoring' },
         { value: 'workroom', label: 'Workroom - Collaboration & Content Creation' },
         { value: 'crm', label: 'AI CRM - Client Management' },
-        { value: 'full', label: 'Full Platform Demo' }
     ];
 
     return (

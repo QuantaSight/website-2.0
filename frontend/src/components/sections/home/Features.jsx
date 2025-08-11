@@ -88,7 +88,7 @@ const Features = ({ darkMode }) => {
 
                 {/* Trust indicators */}
                 <div className="mt-12 sm:mt-16 pt-8 border-t border-gray-200/50">
-                    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-xs text-gray-500">
+                    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm text-gray-500">
                         <div className="flex items-center">
                             <div className="w-2 h-2 bg-green-500 rounded-full mr-2 shadow-lg shadow-green-500/50"></div>
                             ISO 27001 Certified

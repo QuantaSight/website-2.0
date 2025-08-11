@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, FileText, Users, Beaker, Building2 } from 'lucide-react';
+import { Check, FileText, Users, Beaker, Building2, Award } from 'lucide-react';
 
 const XtractFeatures = ({ darkMode }) => {
     return (
@@ -64,7 +64,7 @@ const XtractFeatures = ({ darkMode }) => {
                         </ul>
                     </div>
 
-                    {/* KOL Card */}
+                    {/* Patents Card */}
                     <div className={`professional-card p-6 sm:p-8 h-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
                         darkMode
                             ? 'glass-dark shadow-gray-900/25 hover:shadow-gray-900/40'
@@ -78,26 +78,23 @@ const XtractFeatures = ({ darkMode }) => {
                             <div className={`p-3 rounded-xl shadow-lg transition-all duration-300 mb-4 sm:mb-0 ${
                                 darkMode ? 'bg-green-500/20 shadow-green-500/20' : 'bg-green-50 shadow-green-200/30'
                             }`}>
-                                <Users className={`w-5 h-5 sm:w-6 sm:h-6 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
+                                <Award className={`w-5 h-5 sm:w-6 sm:h-6 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
                             </div>
-                            <h3 className="text-lg font-bold sm:ml-4">KOL (Key Opinion Leaders)</h3>
+                            <h3 className="text-lg font-bold sm:ml-4">Patents</h3>
                         </div>
                         <ul className="space-y-4">
+
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">No more guesswork or hours of research</span>
+                                <span className="text-sm leading-relaxed">AI-powered analysis of patent </span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Publication history and citation analysis</span>
+                                <span className="text-sm leading-relaxed">Patent landscape mapping and competitor analysis</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Institutional affiliations and research networks</span>
-                            </li>
-                            <li className="flex items-start">
-                                <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Transparency in payment and collaboration data</span>
+                                <span className="text-sm leading-relaxed">Real-time patent status and expiration tracking</span>
                             </li>
                         </ul>
                     </div>

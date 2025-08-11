@@ -116,13 +116,13 @@ const CTASection = ({ darkMode }) => {
 
                 {/* Trust indicators */}
                 <div className="mt-8 text-center">
-                    <p className="text-xs text-gray-500 mb-4">Trusted by teams at</p>
+                    <p className="text-sm text-gray-500 mb-4">Trusted by teams at</p>
                     <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 opacity-60">
-                        <div className="text-xs font-medium">Global Pharma Inc.</div>
+                        <div className="text-sm font-medium">Global Pharma Inc.</div>
                         <div className="w-1 h-1 bg-gray-400 rounded-full shadow-sm"></div>
-                        <div className="text-xs font-medium">BioScience Solutions</div>
+                        <div className="text-sm font-medium">BioScience Solutions</div>
                         <div className="w-1 h-1 bg-gray-400 rounded-full shadow-sm"></div>
-                        <div className="text-xs font-medium">MedTech Innovations</div>
+                        <div className="text-sm font-medium">MedTech Innovations</div>
                     </div>
                 </div>
             </div>

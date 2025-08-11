@@ -100,10 +100,7 @@ const Hero = ({ darkMode }) => {
                                 <div className="text-lg sm:text-xl font-bold text-blue-600 mb-1 drop-shadow-sm">70%</div>
                                 <div className="text-xs text-gray-500">Time Saved</div>
                             </div>
-                            <div className="text-center">
-                                <div className="text-lg sm:text-xl font-bold text-blue-600 mb-1 drop-shadow-sm">500+</div>
-                                <div className="text-xs text-gray-500">Researchers</div>
-                            </div>
+
                             <div className="text-center">
                                 <div className="text-lg sm:text-xl font-bold text-blue-600 mb-1 drop-shadow-sm">ISO</div>
                                 <div className="text-xs text-gray-500">Certified</div>

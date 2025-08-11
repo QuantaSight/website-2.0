@@ -12,7 +12,7 @@ const DemoPage = () => {
         <div>
             <DemoHero darkMode={darkMode} />
             <DemoForm darkMode={darkMode} />
-            <DemoTestimonials darkMode={darkMode} />
+            {/*<DemoTestimonials darkMode={darkMode} />*/}
             <FAQ darkMode={darkMode} />
         </div>
     );

@@ -99,8 +99,8 @@ const AboutHero = ({ darkMode }) => {
                 </div>
 
                 {/* Enhanced Trust indicators */}
-                <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200/30">
-                    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-xs text-gray-500">
+                <div className="mt-1 sm:mt-1 pt-6 sm:pt-8 border-t border-gray-200/30">
+                    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm text-gray-500">
                         <div className="flex items-center">
                             <Award className="w-4 h-4 mr-2 text-green-500 drop-shadow-sm" />
                             ISO 27001 Certified

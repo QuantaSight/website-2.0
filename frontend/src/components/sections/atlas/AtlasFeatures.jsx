@@ -118,26 +118,26 @@ const AtlasFeatures = ({ darkMode }) => {
                 </div>
 
                 {/* Performance metrics */}
-                <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200/50">
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div className="text-center">
-                            <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-1 drop-shadow-sm">99.2%</div>
-                            <div className="text-xs text-gray-500">Detection Accuracy</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-xl sm:text-2xl font-bold text-green-600 mb-1 drop-shadow-sm">&lt;24h</div>
-                            <div className="text-xs text-gray-500">Average Response Time</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-xl sm:text-2xl font-bold text-purple-600 mb-1 drop-shadow-sm">2.8M</div>
-                            <div className="text-xs text-gray-500">Sources Monitored</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-xl sm:text-2xl font-bold text-indigo-600 mb-1 drop-shadow-sm">24/7</div>
-                            <div className="text-xs text-gray-500">Continuous Monitoring</div>
-                        </div>
-                    </div>
-                </div>
+                {/*<div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200/50">*/}
+                {/*    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">*/}
+                {/*        <div className="text-center">*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-1 drop-shadow-sm">99.2%</div>*/}
+                {/*            <div className="text-xs text-gray-500">Detection Accuracy</div>*/}
+                {/*        </div>*/}
+                {/*        <div className="text-center">*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-green-600 mb-1 drop-shadow-sm">&lt;24h</div>*/}
+                {/*            <div className="text-xs text-gray-500">Average Response Time</div>*/}
+                {/*        </div>*/}
+                {/*        <div className="text-center">*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-purple-600 mb-1 drop-shadow-sm">2.8M</div>*/}
+                {/*            <div className="text-xs text-gray-500">Sources Monitored</div>*/}
+                {/*        </div>*/}
+                {/*        <div className="text-center">*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-indigo-600 mb-1 drop-shadow-sm">24/7</div>*/}
+                {/*            <div className="text-xs text-gray-500">Continuous Monitoring</div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </section>
     );

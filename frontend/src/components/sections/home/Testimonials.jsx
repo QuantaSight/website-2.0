@@ -78,13 +78,13 @@ const Testimonials = ({ darkMode }) => {
             company: "multinational Ophthalmic Pharmaceutical company.",
             // rating: 5
         },
-        // {
-        //     quote: "The collaboration features in Workroom have transformed how our global teams work together. We can now create regulatory documents in multiple formats simultaneously, saving countless hours of manual work.",
-        //     author: "Dr. Maria Rodriguez",
-        //     title: "Director of Regulatory Affairs",
-        //     company: "MedTech Innovations",
-        //     rating: 5
-        // }
+        {
+            quote: "What impressed me most during the demo was how intuitive the platform is. Our team was able to start using it effectively with minimal training",
+            author: "From a Global Medical Affairs Directo",
+            // title: "Director of Regulatory Affairs",
+            // company: "MedTech Innovations",
+            // rating: 5
+        }
     ];
 
     return (
@@ -119,34 +119,34 @@ const Testimonials = ({ darkMode }) => {
                 </div>
 
                 {/* Trust metrics */}
-                <div className={`p-6 sm:p-8 rounded-xl text-center transition-all duration-300 ${
-                    darkMode
-                        ? 'glass-dark shadow-xl shadow-gray-900/20'
-                        : 'glass-light shadow-xl shadow-blue-100/40'
-                }`} style={{
-                    boxShadow: darkMode
-                        ? '0 8px 20px -6px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
-                        : '0 8px 20px -6px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6)'
-                }}>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-blue-600 drop-shadow-sm">98%</div>
-                            <div className="text-xs text-gray-500">Customer Satisfaction</div>
-                        </div>
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-blue-600 drop-shadow-sm">70%</div>
-                            <div className="text-xs text-gray-500">Time Reduction</div>
-                        </div>
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-blue-600 drop-shadow-sm">500+</div>
-                            <div className="text-xs text-gray-500">Active Researchers</div>
-                        </div>
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-blue-600 drop-shadow-sm">24/7</div>
-                            <div className="text-xs text-gray-500">Expert Support</div>
-                        </div>
-                    </div>
-                </div>
+                {/*<div className={`p-6 sm:p-8 rounded-xl text-center transition-all duration-300 ${*/}
+                {/*    darkMode*/}
+                {/*        ? 'glass-dark shadow-xl shadow-gray-900/20'*/}
+                {/*        : 'glass-light shadow-xl shadow-blue-100/40'*/}
+                {/*}`} style={{*/}
+                {/*    boxShadow: darkMode*/}
+                {/*        ? '0 8px 20px -6px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1)'*/}
+                {/*        : '0 8px 20px -6px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6)'*/}
+                {/*}}>*/}
+                {/*    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-blue-600 drop-shadow-sm">98%</div>*/}
+                {/*            <div className="text-xs text-gray-500">Customer Satisfaction</div>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-blue-600 drop-shadow-sm">70%</div>*/}
+                {/*            <div className="text-xs text-gray-500">Time Reduction</div>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-blue-600 drop-shadow-sm">500+</div>*/}
+                {/*            <div className="text-xs text-gray-500">Active Researchers</div>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-blue-600 drop-shadow-sm">24/7</div>*/}
+                {/*            <div className="text-xs text-gray-500">Expert Support</div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </section>
     );

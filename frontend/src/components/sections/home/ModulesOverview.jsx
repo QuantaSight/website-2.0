@@ -144,8 +144,8 @@ const ModulesOverview = ({ darkMode }) => {
                             </div>
                         </div>
                     </div>
-                    <h3 className="text-sm font-medium mb-2">Seamless Integration</h3>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">
+                    <h3 className="text-lg font-medium mb-2">Seamless Integration</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
                         All modules work together seamlessly, sharing data and insights to provide a unified research experience
                     </p>
                 </div>

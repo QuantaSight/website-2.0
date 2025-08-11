@@ -174,31 +174,31 @@ const AtlasDashboard = ({ darkMode }) => {
                 </div>
 
                 {/* Dashboard Stats */}
-                <div className={`professional-card p-6 sm:p-8 text-center transition-all duration-300 shadow-lg hover:shadow-xl ${
-                    darkMode
-                        ? 'glass-dark shadow-gray-900/20'
-                        : 'glass-light shadow-blue-100/40'
-                }`}>
-                    <h3 className="text-lg font-semibold mb-6">Dashboard Performance</h3>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-1 drop-shadow-sm">350ms</div>
-                            <div className="text-xs text-gray-500">Average Load Time</div>
-                        </div>
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-green-600 mb-1 drop-shadow-sm">99.9%</div>
-                            <div className="text-xs text-gray-500">Uptime SLA</div>
-                        </div>
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-purple-600 mb-1 drop-shadow-sm">50+</div>
-                            <div className="text-xs text-gray-500">Widget Types</div>
-                        </div>
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-indigo-600 mb-1 drop-shadow-sm">Custom</div>
-                            <div className="text-xs text-gray-500">Dashboards</div>
-                        </div>
-                    </div>
-                </div>
+                {/*<div className={`professional-card p-6 sm:p-8 text-center transition-all duration-300 shadow-lg hover:shadow-xl ${*/}
+                {/*    darkMode*/}
+                {/*        ? 'glass-dark shadow-gray-900/20'*/}
+                {/*        : 'glass-light shadow-blue-100/40'*/}
+                {/*}`}>*/}
+                {/*    <h3 className="text-lg font-semibold mb-6">Dashboard Performance</h3>*/}
+                {/*    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-1 drop-shadow-sm">350ms</div>*/}
+                {/*            <div className="text-xs text-gray-500">Average Load Time</div>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-green-600 mb-1 drop-shadow-sm">99.9%</div>*/}
+                {/*            <div className="text-xs text-gray-500">Uptime SLA</div>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-purple-600 mb-1 drop-shadow-sm">50+</div>*/}
+                {/*            <div className="text-xs text-gray-500">Widget Types</div>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-indigo-600 mb-1 drop-shadow-sm">Custom</div>*/}
+                {/*            <div className="text-xs text-gray-500">Dashboards</div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </section>
     );

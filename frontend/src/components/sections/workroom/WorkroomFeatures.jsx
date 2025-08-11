@@ -31,7 +31,7 @@ const FeatureCard = ({ title, description, icon, badge }) => {
 
 const WorkroomFeatures = ({ darkMode }) => {
     return (
-        <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-gray-50/50 to-white'}`}>
+        <section className={`py-16 lg:py-2 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-gray-50/50 to-white'}`}>
             <div className="main-container">
                 <div className="text-center mb-12 sm:mb-16">
                     <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
@@ -115,31 +115,31 @@ const WorkroomFeatures = ({ darkMode }) => {
                 </div>
 
                 {/* Trust indicators */}
-                <div className={`p-6 sm:p-8 rounded-xl text-center transition-all duration-300 shadow-lg hover:shadow-xl ${
-                    darkMode
-                        ? 'glass-dark shadow-gray-900/20'
-                        : 'glass-light shadow-blue-100/40'
-                }`}>
-                    <h3 className="text-lg font-semibold mb-6">Trusted by Pharmaceutical Teams</h3>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-1 drop-shadow-sm">99.9%</div>
-                            <div className="text-xs text-gray-500">Uptime</div>
-                        </div>
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-green-600 mb-1 drop-shadow-sm">500+</div>
-                            <div className="text-xs text-gray-500">Active Users</div>
-                        </div>
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-purple-600 mb-1 drop-shadow-sm">50+</div>
-                            <div className="text-xs text-gray-500">Document Types</div>
-                        </div>
-                        <div>
-                            <div className="text-xl sm:text-2xl font-bold text-indigo-600 mb-1 drop-shadow-sm">24/7</div>
-                            <div className="text-xs text-gray-500">Support</div>
-                        </div>
-                    </div>
-                </div>
+                {/*<div className={`p-6 sm:p-8 rounded-xl text-center transition-all duration-300 shadow-lg hover:shadow-xl ${*/}
+                {/*    darkMode*/}
+                {/*        ? 'glass-dark shadow-gray-900/20'*/}
+                {/*        : 'glass-light shadow-blue-100/40'*/}
+                {/*}`}>*/}
+                {/*    <h3 className="text-lg font-semibold mb-6">Trusted by Pharmaceutical Teams</h3>*/}
+                {/*    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-1 drop-shadow-sm">99.9%</div>*/}
+                {/*            <div className="text-xs text-gray-500">Uptime</div>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-green-600 mb-1 drop-shadow-sm">500+</div>*/}
+                {/*            <div className="text-xs text-gray-500">Active Users</div>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-purple-600 mb-1 drop-shadow-sm">50+</div>*/}
+                {/*            <div className="text-xs text-gray-500">Document Types</div>*/}
+                {/*        </div>*/}
+                {/*        <div>*/}
+                {/*            <div className="text-xl sm:text-2xl font-bold text-indigo-600 mb-1 drop-shadow-sm">24/7</div>*/}
+                {/*            <div className="text-xs text-gray-500">Support</div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </section>
     );
