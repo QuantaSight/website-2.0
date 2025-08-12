@@ -6,10 +6,11 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
     plugins: [
         react(),
-        tailwindcss()  // 👈 This is what you were missing!
+        tailwindcss()
     ],
     server: {
         host: '0.0.0.0',
-        port: 5173
+        port: 5173,
+        allowedHosts: ['quantasight.com'],
     }
 })
