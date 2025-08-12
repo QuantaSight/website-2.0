@@ -7,11 +7,10 @@ import BlogDetail from '../components/sections/blogs/BlogDetail';
 
 // API service
 const blogAPI = {
-    baseURL: 'http://localhost:5000/api',
-
     async getBlogs(page = 1, limit = 10) {
         try {
-            const response = await fetch(`${this.baseURL}/blogs?page=${page}&limit=${limit}&status=published`);
+            const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+            const response = await fetch(`${API_BASE_URL}/api/blogs?page=${page}&limit=${limit}&status=published`);
             const data = await response.json();
             return data;
         } catch (error) {
@@ -22,7 +21,8 @@ const blogAPI = {
 
     async getBlogById(id) {
         try {
-            const response = await fetch(`${this.baseURL}/blogs/${id}`);
+            const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+            const response = await fetch(`${API_BASE_URL}/api/blogs/${id}`);
             const data = await response.json();
             return data;
         } catch (error) {
@@ -33,7 +33,8 @@ const blogAPI = {
 
     async getBlogBySlug(slug) {
         try {
-            const response = await fetch(`${this.baseURL}/blogs/slug/${slug}`);
+            const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+            const response = await fetch(`${API_BASE_URL}/api/blogs/slug/${slug}`);
             const data = await response.json();
             return data;
         } catch (error) {
@@ -50,7 +51,8 @@ const transformBlogData = (blogData) => {
         excerpt: blogData.description,
         role: blogData.author_position,
         image: blogData.featured_image,
-        date: new Date(blogData.created_at).toLocaleDateString('en-US', {            year: 'numeric',
+        date: new Date(blogData.created_at).toLocaleDateString('en-US', {
+            year: 'numeric',
             month: 'long',
             day: 'numeric'
         })
