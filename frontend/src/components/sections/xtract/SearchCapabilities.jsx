@@ -27,7 +27,7 @@ const SearchCapabilities = ({ darkMode }) => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left side - Features */}
-                    <div className="space-y-10">
+                    <div className="space-y-3">
                         {/* Boolean Operators Card */}
                         <div className={`professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
                             darkMode
@@ -46,7 +46,7 @@ const SearchCapabilities = ({ darkMode }) => {
                                 </div>
                                 <h3 className="text-base font-bold sm:ml-3">Boolean Operators</h3>
                             </div>
-                            <ul className="space-y-3">
+                            <ul className="space-y-1">
                                 <li className="flex items-start">
                                     <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                     <span className="text-sm leading-relaxed">AND, OR, NOT operators for precise queries</span>
@@ -76,7 +76,7 @@ const SearchCapabilities = ({ darkMode }) => {
                                 </div>
                                 <h3 className="text-base font-bold sm:ml-3">Date & Year Filtering</h3>
                             </div>
-                            <ul className="space-y-3">
+                            <ul className="space-y-1">
                                 <li className="flex items-start">
                                     <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
                                     <span className="text-sm leading-relaxed">Year range filtering: [2020 TO 2025]</span>
@@ -189,18 +189,18 @@ const SearchCapabilities = ({ darkMode }) => {
                             </div>
 
                             {/* Stats */}
-                            <div className="mt-6 pt-6 border-t border-gray-200/20">
-                                <div className="grid grid-cols-2 gap-4 text-center">
-                                    <div>
-                                        <div className="text-base sm:text-lg font-bold text-blue-600">2.3M+</div>
-                                        <div className="text-xs text-gray-500">Documents Indexed</div>
-                                    </div>
-                                    <div>
-                                        <div className="text-base sm:text-lg font-bold text-green-600">&lt;0.5s</div>
-                                        <div className="text-xs text-gray-500">Average Search Time</div>
-                                    </div>
-                                </div>
-                            </div>
+                            {/*<div className="mt-6 pt-6 border-t border-gray-200/20">*/}
+                            {/*    <div className="grid grid-cols-2 gap-4 text-center">*/}
+                            {/*        <div>*/}
+                            {/*            <div className="text-base sm:text-lg font-bold text-blue-600">2.3M+</div>*/}
+                            {/*            <div className="text-xs text-gray-500">Documents Indexed</div>*/}
+                            {/*        </div>*/}
+                            {/*        <div>*/}
+                            {/*            <div className="text-base sm:text-lg font-bold text-green-600">&lt;0.5s</div>*/}
+                            {/*            <div className="text-xs text-gray-500">Average Search Time</div>*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
+                            {/*</div>*/}
                         </div>
                     </div>
                 </div>

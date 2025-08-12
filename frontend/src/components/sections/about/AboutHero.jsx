@@ -44,32 +44,24 @@ const AboutHero = ({ darkMode }) => {
                 </div>
 
                 {/* Enhanced Key metrics with shadows */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12">
-                    <div className={`text-center p-4 sm:p-6 rounded-lg transition-all hover:scale-105 shadow-lg hover:shadow-xl ${
-                        darkMode
-                            ? 'glass-dark shadow-gray-900/20 hover:shadow-gray-900/30'
-                            : 'glass-light shadow-blue-100/40 hover:shadow-blue-200/50'
-                    }`}>
-                        <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-2 drop-shadow-sm">15+</div>
-                        <div className="text-xs text-gray-500">Countries Served</div>
-                    </div>
-                    <div className={`text-center p-4 sm:p-6 rounded-lg transition-all hover:scale-105 shadow-lg hover:shadow-xl ${
-                        darkMode
-                            ? 'glass-dark shadow-gray-900/20 hover:shadow-gray-900/30'
-                            : 'glass-light shadow-blue-100/40 hover:shadow-blue-200/50'
-                    }`}>
-                        <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-2 drop-shadow-sm">98%</div>
-                        <div className="text-xs text-gray-500">Accuracy Rate</div>
-                    </div>
-                    <div className={`text-center p-4 sm:p-6 rounded-lg transition-all hover:scale-105 shadow-lg hover:shadow-xl ${
-                        darkMode
-                            ? 'glass-dark shadow-gray-900/20 hover:shadow-gray-900/30'
-                            : 'glass-light shadow-blue-100/40 hover:shadow-blue-200/50'
-                    }`}>
-                        <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-2 drop-shadow-sm">70%</div>
-                        <div className="text-xs text-gray-500">Time Reduction</div>
-                    </div>
-                </div>
+                {/*<div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12">*/}
+                {/*    <div className={`text-center p-4 sm:p-6 rounded-lg transition-all hover:scale-105 shadow-lg hover:shadow-xl ${*/}
+                {/*        darkMode*/}
+                {/*            ? 'glass-dark shadow-gray-900/20 hover:shadow-gray-900/30'*/}
+                {/*            : 'glass-light shadow-blue-100/40 hover:shadow-blue-200/50'*/}
+                {/*    }`}>*/}
+                {/*        <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-2 drop-shadow-sm">98%</div>*/}
+                {/*        <div className="text-xs text-gray-500">Accuracy Rate</div>*/}
+                {/*    </div>*/}
+                {/*    <div className={`text-center p-4 sm:p-6 rounded-lg transition-all hover:scale-105 shadow-lg hover:shadow-xl ${*/}
+                {/*        darkMode*/}
+                {/*            ? 'glass-dark shadow-gray-900/20 hover:shadow-gray-900/30'*/}
+                {/*            : 'glass-light shadow-blue-100/40 hover:shadow-blue-200/50'*/}
+                {/*    }`}>*/}
+                {/*        <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-2 drop-shadow-sm">70%</div>*/}
+                {/*        <div className="text-xs text-gray-500">Time Reduction</div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
 
                 {/* Enhanced Mission statement with shadows */}
                 <div className={`professional-card text-center p-6 sm:p-8 transition-all duration-300 shadow-xl hover:shadow-2xl ${

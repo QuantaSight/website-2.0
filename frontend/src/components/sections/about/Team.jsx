@@ -134,12 +134,12 @@ const Team = ({ darkMode }) => {
                     />
                     <TeamMember
                         name="Bhargav Sri Sai"
-                        title="AI Research Lead"
+                        title="Data Scientist"
                         image="/api/placeholder/200/200"
                         location="Remote"
                         linkdin="https://www.linkedin.com/in/bhargav-sri-sai-147331204/"
                         twitter="https://www.linkedin.com/in/bhargav-sri-sai-147331204/"
-                        TeamLead="AI Research"
+                        TeamLead="Data Scientist"
                         darkMode={darkMode}
                     />
                     <TeamMember
