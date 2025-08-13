@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import MainLayout from './components/layout/MainLayout';
-import ScrollToTop from './components/common/ScrollToTop'; // Import the ScrollToTop component
+import ScrollToTop from './components/common/ScrollToTop';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import XtractPage from './pages/XtractPage';
@@ -19,8 +19,8 @@ import './styles/animations.css';
 const App = () => {
     return (
         <ThemeProvider>
-            <Router>
-                <ScrollToTop /> {/* Add ScrollToTop component here */}
+            <Router basename="/website">
+                <ScrollToTop />
                 <MainLayout>
                     <Routes>
                         <Route path="/" element={<HomePage />} />
