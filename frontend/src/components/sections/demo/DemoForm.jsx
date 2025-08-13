@@ -47,7 +47,7 @@ const DemoForm = ({ darkMode }) => {
         try {
             const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-            const response = await fetch(`${API_BASE_URL}/api/demo-requests`, {
+            const response = await fetch(`${API_BASE_URL}/web-api/demo-requests`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

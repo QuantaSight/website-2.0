@@ -7,7 +7,13 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:3001', 'http://localhost:3000'], // React dev servers
+    origin: [
+        'http://localhost:5173',
+        'http://localhost:3001',
+        'http://localhost:3000',
+        'https://quantasight.com',
+        'http://quantasight.com'
+    ],
     credentials: true
 }));
 
@@ -18,38 +24,38 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 const connectDB = require('./config/database');
 connectDB();
 
-// Routes
-app.use('/api/blogs', require('./routes/blogs'));
-app.use('/api/demo-requests', require('./routes/demoRequests'));
+// Routes - Changed from /api/ to /web-api/
+app.use('/web-api/blogs', require('./routes/blogs'));
+app.use('/web-api/demo-requests', require('./routes/demoRequests'));
 
 // Health check endpoint
-app.get('/api/health', (req, res) => {
+app.get('/web-api/health', (req, res) => {
     res.json({
         status: 'OK',
         message: 'QuantaSight API is running!',
         timestamp: new Date().toISOString(),
         endpoints: {
-            blogs: '/api/blogs',
-            demoRequests: '/api/demo-requests'
+            blogs: '/web-api/blogs',
+            demoRequests: '/web-api/demo-requests'
         }
     });
 });
 
 // API info endpoint
-app.get('/api', (req, res) => {
+app.get('/web-api', (req, res) => {
     res.json({
         name: 'QuantaSight Website API',
         version: '1.0.0',
         description: 'Public API for website functionality',
         endpoints: {
-            health: '/api/health',
+            health: '/web-api/health',
             blogs: {
-                list: 'GET /api/blogs',
-                byId: 'GET /api/blogs/:id',
-                bySlug: 'GET /api/blogs/slug/:slug'
+                list: 'GET /web-api/blogs',
+                byId: 'GET /web-api/blogs/:id',
+                bySlug: 'GET /web-api/blogs/slug/:slug'
             },
             demoRequests: {
-                create: 'POST /api/demo-requests',
+                create: 'POST /web-api/demo-requests',
                 note: 'Management endpoints available for main platform integration'
             }
         }
@@ -60,7 +66,6 @@ app.get('/api', (req, res) => {
 app.use((err, req, res, next) => {
     console.error('Error occurred:', err.stack);
 
-    // Handle specific error types
     if (err.type === 'entity.parse.failed') {
         return res.status(400).json({
             status: 'error',
@@ -89,17 +94,17 @@ app.use('*', (req, res) => {
         status: 'error',
         message: `Route ${req.originalUrl} not found`,
         availableEndpoints: [
-            '/api/health',
-            '/api/blogs',
-            '/api/demo-requests'
+            '/web-api/health',
+            '/web-api/blogs',
+            '/web-api/demo-requests'
         ]
     });
 });
 
 app.listen(PORT, () => {
     console.log(`🚀 QuantaSight API running on port ${PORT}`);
-    console.log(`📋 Health check: http://localhost:${PORT}/api/health`);
-    console.log(`📖 Blogs: http://localhost:${PORT}/api/blogs`);
-    console.log(`📝 Demo Requests: http://localhost:${PORT}/api/demo-requests`);
+    console.log(`📋 Health check: http://localhost:${PORT}/web-api/health`);
+    console.log(`📖 Blogs: http://localhost:${PORT}/web-api/blogs`);
+    console.log(`📝 Demo Requests: http://localhost:${PORT}/web-api/demo-requests`);
     console.log(`🔧 Environment: ${process.env.NODE_ENV || 'development'}`);
 });

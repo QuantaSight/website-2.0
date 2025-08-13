@@ -10,7 +10,7 @@ const blogAPI = {
     async getBlogs(page = 1, limit = 10) {
         try {
             const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-            const response = await fetch(`${API_BASE_URL}/api/blogs?page=${page}&limit=${limit}&status=published`);
+            const response = await fetch(`${API_BASE_URL}/web-api/blogs?page=${page}&limit=${limit}&status=published`);
             const data = await response.json();
             return data;
         } catch (error) {
@@ -22,7 +22,7 @@ const blogAPI = {
     async getBlogById(id) {
         try {
             const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-            const response = await fetch(`${API_BASE_URL}/api/blogs/${id}`);
+            const response = await fetch(`${API_BASE_URL}/web-api/blogs/${id}`);
             const data = await response.json();
             return data;
         } catch (error) {
@@ -34,7 +34,7 @@ const blogAPI = {
     async getBlogBySlug(slug) {
         try {
             const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-            const response = await fetch(`${API_BASE_URL}/api/blogs/slug/${slug}`);
+            const response = await fetch(`${API_BASE_URL}/web-api/blogs/slug/${slug}`);
             const data = await response.json();
             return data;
         } catch (error) {
