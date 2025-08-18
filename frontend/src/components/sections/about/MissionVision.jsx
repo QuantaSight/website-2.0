@@ -119,10 +119,11 @@ const MissionVision = ({ darkMode }) => {
                         ? 'glass-dark shadow-gray-900/20'
                         : 'glass-light shadow-blue-100/40'
                 }`}>
-                    <div className="max-w-4xl mx-auto">
+                    <div className="max-w-6xl mx-auto">
                         <h3 className="text-lg font-semibold mb-6">Core Values</h3>
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                            <div className="flex flex-col items-center">
+                        <div className="flex justify-between items-start">
+                            {/* Innovation - positioned left */}
+                            <div className="flex flex-col items-center text-left flex-1">
                                 <div className={`p-3 rounded-full mb-3 ${
                                     darkMode ? 'bg-green-500/20' : 'bg-green-100'
                                 }`}>
@@ -131,7 +132,9 @@ const MissionVision = ({ darkMode }) => {
                                 <h4 className="font-medium mb-2">Innovation</h4>
                                 <p className="text-xs text-gray-500">Pioneering AI solutions for pharmaceutical research</p>
                             </div>
-                            <div className="flex flex-col items-center">
+
+                            {/* Precision - centered with space */}
+                            <div className="flex flex-col items-center flex-1 mx-8">
                                 <div className={`p-3 rounded-full mb-3 ${
                                     darkMode ? 'bg-blue-500/20' : 'bg-blue-100'
                                 }`}>
@@ -140,7 +143,9 @@ const MissionVision = ({ darkMode }) => {
                                 <h4 className="font-medium mb-2">Precision</h4>
                                 <p className="text-xs text-gray-500">Delivering accurate and reliable scientific insights</p>
                             </div>
-                            <div className="flex flex-col items-center">
+
+                            {/* Impact - positioned right */}
+                            <div className="flex flex-col items-center text-right flex-1">
                                 <div className={`p-3 rounded-full mb-3 ${
                                     darkMode ? 'bg-purple-500/20' : 'bg-purple-100'
                                 }`}>

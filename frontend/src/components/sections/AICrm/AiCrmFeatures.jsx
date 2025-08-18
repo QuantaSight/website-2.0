@@ -42,24 +42,24 @@ const AiCrmFeatures = ({ darkMode }) => {
                             }`}>
                                 <Upload className={`w-5 h-5 sm:w-6 sm:h-6 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
                             </div>
-                            <h3 className="text-lg font-bold sm:ml-4">Data Upload & Integration</h3>
+                            <h3 className={`text-lg font-bold sm:ml-4 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Data Upload & Integration</h3>
                         </div>
                         <ul className="space-y-4">
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Smart sheet upload with automatic data parsing and validation</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Smart sheet upload with automatic data parsing and validation</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">AI-powered data extraction from multiple file formats</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>AI-powered data extraction from multiple file formats</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Seamless integration with existing CRM systems</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Seamless integration with existing CRM systems</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Real-time data synchronization and updates</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Real-time data synchronization and updates</span>
                             </li>
                         </ul>
                     </div>
@@ -80,24 +80,24 @@ const AiCrmFeatures = ({ darkMode }) => {
                             }`}>
                                 <Users className={`w-5 h-5 sm:w-6 sm:h-6 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
                             </div>
-                            <h3 className="text-lg font-bold sm:ml-4">KOL Management</h3>
+                            <h3 className={`text-lg font-bold sm:ml-4 ${darkMode ? 'text-white' : 'text-gray-800'}`}>KOL Management</h3>
                         </div>
                         <ul className="space-y-4">
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Comprehensive KOL profiles with expertise mapping</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Comprehensive KOL profiles with expertise mapping</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Interaction history tracking and relationship scoring</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Interaction history tracking and relationship scoring</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Automated engagement recommendations and follow-ups</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Automated engagement recommendations and follow-ups</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Network visualization and influence mapping</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Network visualization and influence mapping</span>
                             </li>
                         </ul>
                     </div>
@@ -118,24 +118,24 @@ const AiCrmFeatures = ({ darkMode }) => {
                             }`}>
                                 <MessageSquare className={`w-5 h-5 sm:w-6 sm:h-6 ${darkMode ? 'text-purple-400' : 'text-purple-600'}`} />
                             </div>
-                            <h3 className="text-lg font-bold sm:ml-4">AI Chat Interface</h3>
+                            <h3 className={`text-lg font-bold sm:ml-4 ${darkMode ? 'text-white' : 'text-gray-800'}`}>AI Chat Interface</h3>
                         </div>
                         <ul className="space-y-4">
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Natural language queries for complex medical science data</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Natural language queries for complex medical science data</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Multi-modal conversations with data visualization</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Multi-modal conversations with data visualization</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Context-aware responses based on uploaded datasets</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Context-aware responses based on uploaded datasets</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Instant insights and trend analysis generation</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Instant insights and trend analysis generation</span>
                             </li>
                         </ul>
                     </div>
@@ -156,24 +156,24 @@ const AiCrmFeatures = ({ darkMode }) => {
                             }`}>
                                 <Building2 className={`w-5 h-5 sm:w-6 sm:h-6 ${darkMode ? 'text-indigo-400' : 'text-indigo-600'}`} />
                             </div>
-                            <h3 className="text-lg font-bold sm:ml-4">Company Intelligence</h3>
+                            <h3 className={`text-lg font-bold sm:ml-4 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Company Intelligence</h3>
                         </div>
                         <ul className="space-y-4">
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Competitive landscape analysis and market positioning</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Competitive landscape analysis and market positioning</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Medical affairs project tracking and milestone monitoring</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Medical affairs project tracking and milestone monitoring</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Partnership opportunity identification and scoring</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Partnership opportunity identification and scoring</span>
                             </li>
                             <li className="flex items-start">
                                 <Check size={16} className="text-green-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                <span className="text-sm leading-relaxed">Strategic decision support with predictive analytics</span>
+                                <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Strategic decision support with predictive analytics</span>
                             </li>
                         </ul>
                     </div>

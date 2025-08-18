@@ -20,12 +20,12 @@ const AboutHero = ({ darkMode }) => {
             <div className="main-container relative">
                 {/* Company badge */}
                 <div className="text-center mb-8 sm:mb-10">
-                    <div className={`inline-flex items-center px-3 sm:px-4 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
-                        darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
-                    }`}>
-                        <Building2 className="w-3 h-3 mr-2" />
-                        Founded in 2022 • London, UK
-                    </div>
+                    {/*<div className={`inline-flex items-center px-3 sm:px-4 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${*/}
+                    {/*    darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'*/}
+                    {/*}`}>*/}
+                    {/*    <Building2 className="w-3 h-3 mr-2" />*/}
+                    {/*    Founded in 2022 • London, UK*/}
+                    {/*</div>*/}
 
                     <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 ${
                         darkMode ? 'text-white' : 'text-gray-800'
@@ -91,14 +91,14 @@ const AboutHero = ({ darkMode }) => {
                 </div>
 
                 {/* Enhanced Trust indicators */}
-                <div className="mt-1 sm:mt-1 pt-6 sm:pt-8 border-t border-gray-200/30">
-                    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm text-gray-500">
-                        <div className="flex items-center">
-                            <Award className="w-4 h-4 mr-2 text-green-500 drop-shadow-sm" />
-                            ISO 27001 Certified
-                        </div>
-                    </div>
-                </div>
+                {/*<div className="mt-1 sm:mt-1 pt-6 sm:pt-8 border-t border-gray-200/30">*/}
+                {/*    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm text-gray-500">*/}
+                {/*        <div className="flex items-center">*/}
+                {/*            <Award className="w-4 h-4 mr-2 text-green-500 drop-shadow-sm" />*/}
+                {/*            ISO 27001 Certified*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</div>*/}
             </div>
         </section>
     );

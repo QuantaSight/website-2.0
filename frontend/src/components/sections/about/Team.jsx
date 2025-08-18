@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Users, MapPin, ExternalLink, User } from 'lucide-react';
 import SocialButton from '../../common/SocialButton';
 import founder from "../../../assets/images/Founder.png";
-import cto from "../../../assets/images/cto.png";
+import cto from "../../../assets/images/cto.jpg";
 
 // Enhanced TeamMember component with professional styling and icon fallback
 const TeamMember = ({ name, title, image, linkdin, twitter, location, TeamLead, darkMode }) => {
@@ -126,9 +126,9 @@ const Team = ({ darkMode }) => {
                         name="Ayush Mishra"
                         title="Chief Technology Officer"
                         image={cto}
-                        location="Remote"
+                        location="Delhi, NCR, India"
                         linkdin="https://www.linkedin.com/in/ayush-mishra-b8882712b/"
-                        twitter="https://www.linkedin.com/in/ayush-mishra-b8882712b/"
+                        twitter="https://x.com/mishraayush945"
                         TeamLead="CTO"
                         darkMode={darkMode}
                     />
@@ -136,9 +136,9 @@ const Team = ({ darkMode }) => {
                         name="Bhargav Sri Sai"
                         title="Data Scientist"
                         image="/api/placeholder/200/200"
-                        location="Remote"
+                        location="Andhra Pradesh, India"
                         linkdin="https://www.linkedin.com/in/bhargav-sri-sai-147331204/"
-                        twitter="https://www.linkedin.com/in/bhargav-sri-sai-147331204/"
+                        twitter="https://x.com/Bhargav_3212"
                         TeamLead="Data Scientist"
                         darkMode={darkMode}
                     />
@@ -146,7 +146,7 @@ const Team = ({ darkMode }) => {
                         name="Kevin Patel"
                         title="Software Developer"
                         image="/api/placeholder/200/200"
-                        location="Remote"
+                        location="Gujarat, India"
                         linkdin="https://www.linkedin.com/in/kevin222004/"
                         twitter="https://x.com/KevinPatel2004"
                         TeamLead="Software Developer"

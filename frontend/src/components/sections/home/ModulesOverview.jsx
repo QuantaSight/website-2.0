@@ -31,15 +31,15 @@ const ModuleCard = ({ title, description, icon, to, badge }) => {
                             className: `w-7 h-7 sm:w-8 sm:h-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`
                         })}
                     </div>
-                    {badge && (
-                        <span className={`px-2 py-1 text-xs font-medium rounded-full shadow-lg transition-all duration-300 ${
-                            darkMode
-                                ? 'bg-green-500/20 text-green-400 shadow-green-500/30'
-                                : 'bg-green-100 text-green-700 shadow-green-200/50'
-                        }`}>
-                            {badge}
-                        </span>
-                    )}
+                    {/*{badge && (*/}
+                    {/*    <span className={`px-2 py-1 text-xs font-medium rounded-full shadow-lg transition-all duration-300 ${*/}
+                    {/*        darkMode*/}
+                    {/*            ? 'bg-green-500/20 text-green-400 shadow-green-500/30'*/}
+                    {/*            : 'bg-green-100 text-green-700 shadow-green-200/50'*/}
+                    {/*    }`}>*/}
+                    {/*        {badge}*/}
+                    {/*    </span>*/}
+                    {/*)}*/}
                 </div>
 
                 {/* Content */}

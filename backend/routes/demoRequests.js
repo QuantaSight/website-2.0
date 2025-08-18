@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 // Email configuration
 const SUPPORT_EMAIL = "support@quantasight.com";
 const SUPPORT_PASSWORD = "qxnf suue xxqn whcm";
-const ADMIN_EMAILS = ["ayush@quantasight.com, sameer@quantasight.com"]; // Update with admin emails
+const ADMIN_EMAILS = ["ayush@quantasight.com"]; // Update with admin emails
 
 // Create transporter
 const transporter = nodemailer.createTransport({
@@ -132,28 +132,27 @@ const sendAdminNotificationEmail = async (userData) => {
         <html>
             <head>
                 <style>
-                    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #1a1a1a; }
+                    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background: #f8fafc; }
                     .container { max-width: 600px; margin: 0 auto; padding: 20px; }
                     .header { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; padding: 20px; border-radius: 10px 10px 0 0; text-align: center; }
-                    .content { background: #2d2d2d; color: #e5e5e5; padding: 20px; border-radius: 0 0 10px 10px; }
-                    .section { background: #3d3d3d; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6; }
+                    .content { background: #ffffff; color: #374151; padding: 20px; border-radius: 0 0 10px 10px; border: 1px solid #e5e7eb; }
+                    .section { background: #f9fafb; padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #3b82f6; border: 1px solid #e5e7eb; }
                     .section.requirements { border-left-color: #10b981; }
                     .section.warning { border-left-color: #f59e0b; }
                     .section-title { color: #3b82f6; font-weight: bold; margin-bottom: 10px; }
                     .requirements .section-title { color: #10b981; }
                     .warning .section-title { color: #f59e0b; }
                     .detail-item { margin: 8px 0; }
-                    .label { font-weight: bold; color: #9ca3af; }
-                    .value { color: #e5e5e5; }
-                    .not-provided { color: #6b7280; font-style: italic; }
-                    .timestamp { background: #374151; padding: 10px; border-radius: 5px; font-family: monospace; }
+                    .label { font-weight: bold; color: #6b7280; }
+                    .value { color: #374151; }
+                    .not-provided { color: #9ca3af; font-style: italic; }
+                    .timestamp { background: #f3f4f6; padding: 10px; border-radius: 5px; font-family: monospace; border: 1px solid #d1d5db; }
                 </style>
             </head>
             <body>
                 <div class="container">
                     <div class="header">
                         <h2>📋 New Demo Request</h2>
-                        <p style="margin: 0;">from</p>
                     </div>
                     <div class="content">
                         <div class="section">
@@ -207,8 +206,8 @@ const sendAdminNotificationEmail = async (userData) => {
                             </div>
                         </div>
                         
-                        <div style="margin-top: 20px; padding: 15px; background: #374151; border-radius: 8px; text-align: center;">
-                            <p style="margin: 0; color: #10b981;"><strong>Action Required:</strong> Schedule demo within 24 hours</p>
+                        <div style="margin-top: 20px; padding: 15px; background: #f0f9ff; border-radius: 8px; text-align: center; border: 1px solid #0ea5e9;">
+                            <p style="margin: 0; color: #0369a1;"><strong>Action Required:</strong> Schedule demo within 24 hours</p>
                         </div>
                     </div>
                 </div>

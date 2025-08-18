@@ -105,6 +105,7 @@ const AtlasFeatures = ({ darkMode }) => {
                             <div className="text-sm font-medium mb-1">Regulatory Databases</div>
                             <div className="text-xs text-gray-500">FDA FAERS, EMA</div>
                         </div>
+
                         <div className="flex flex-col items-center">
                             <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mb-3 ${
                                 darkMode ? 'bg-amber-500/20' : 'bg-amber-100'
@@ -113,6 +114,16 @@ const AtlasFeatures = ({ darkMode }) => {
                             </div>
                             <div className="text-sm font-medium mb-1">Clinical Trial Data</div>
                             <div className="text-xs text-gray-500">ClinicalTrials.gov</div>
+                        </div>
+
+                        <div className="flex flex-col items-center">
+                            <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mb-3 ${
+                                darkMode ? 'bg-green-500/20' : 'bg-green-100'
+                            }`}>
+                                <Brain className={`w-5 h-5 sm:w-6 sm:h-6 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
+                            </div>
+                            <div className="text-sm font-medium mb-1">Patent Databases</div>
+                            <div className="text-xs text-gray-500">USPTO, Google Patents</div>
                         </div>
                     </div>
                 </div>

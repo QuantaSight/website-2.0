@@ -46,8 +46,8 @@ const AiCrmHero = ({ darkMode }) => {
                                     : 'bg-white/50 backdrop-blur-sm shadow-blue-100/40'
                             }`}>
                                 <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 mb-3 drop-shadow-sm mx-auto lg:mx-0" />
-                                <div className="text-sm font-medium mb-1">Smart Upload</div>
-                                <div className="text-xs text-gray-500">Data Integration</div>
+                                <div className={`text-sm font-medium mb-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Smart Upload</div>
+                                <div className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Data Integration</div>
                             </div>
                             <div className={`p-4 sm:p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
                                 darkMode
@@ -55,8 +55,8 @@ const AiCrmHero = ({ darkMode }) => {
                                     : 'bg-white/50 backdrop-blur-sm shadow-blue-100/40'
                             }`}>
                                 <Users className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 mb-3 drop-shadow-sm mx-auto lg:mx-0" />
-                                <div className="text-sm font-medium mb-1">KOL Tracking</div>
-                                <div className="text-xs text-gray-500">Relationship Maps</div>
+                                <div className={`text-sm font-medium mb-1 ${darkMode ? 'text-white' : 'text-gray-800'}`}>KOL Tracking</div>
+                                <div className={`text-xs ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>Relationship Maps</div>
                             </div>
                         </div>
 
@@ -88,24 +88,24 @@ const AiCrmHero = ({ darkMode }) => {
                                 {/* Mock interface */}
                                 <div className="space-y-4 sm:space-y-5">
                                     <div className="flex items-center justify-between">
-                                        <div className="text-sm font-medium">CRM Query</div>
+                                        <div className={`text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'}`}>CRM Query</div>
                                         <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></div>
                                     </div>
 
-                                    <div className={`p-3 sm:p-4 rounded-lg text-xs shadow-inner ${darkMode ? 'bg-gray-700' : 'bg-gray-100'}`}>
+                                    <div className={`p-3 sm:p-4 rounded-lg text-xs shadow-inner ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}>
                                         "Show me top KOLs in oncology research with recent interactions"
                                     </div>
 
                                     <div className="space-y-3">
-                                        <div className="flex items-center text-xs">
+                                        <div className={`flex items-center text-xs ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                                             <div className="w-3 h-3 bg-blue-500 rounded mr-3 shadow-lg shadow-blue-500/50"></div>
                                             <span>Processing CRM data...</span>
                                         </div>
-                                        <div className="flex items-center text-xs">
+                                        <div className={`flex items-center text-xs ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                                             <div className="w-3 h-3 bg-green-500 rounded mr-3 shadow-lg shadow-green-500/50"></div>
                                             <span>Analyzing KOL interactions...</span>
                                         </div>
-                                        <div className="flex items-center text-xs">
+                                        <div className={`flex items-center text-xs ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                                             <div className="w-3 h-3 bg-purple-500 rounded mr-3 shadow-lg shadow-purple-500/50"></div>
                                             <span>Generating relationship insights...</span>
                                         </div>
@@ -113,7 +113,7 @@ const AiCrmHero = ({ darkMode }) => {
 
                                     <div className={`p-3 sm:p-4 rounded-lg shadow-lg ${darkMode ? 'bg-blue-900/20' : 'bg-blue-50'}`}>
                                         <div className="text-xs font-medium text-blue-700 mb-2">Top KOL Insights</div>
-                                        <div className="text-xs text-gray-600">Dr. Smith - 12 interactions this quarter, focus on immunotherapy...</div>
+                                        <div className={`text-xs ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Dr. Smith - 12 interactions this quarter, focus on immunotherapy...</div>
                                     </div>
                                 </div>
                             </div>

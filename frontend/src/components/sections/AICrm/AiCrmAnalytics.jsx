@@ -3,7 +3,7 @@ import { BarChart, Filter, Calendar, Quote, User, ChevronRight } from 'lucide-re
 
 const AiCrmAnalytics = ({ darkMode }) => {
     return (
-        <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-white to-gray-50/50'}`}>
+        <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-800' : 'bg-gradient-to-b from-white to-gray-50/50'}`}>
             <div className="main-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
@@ -44,16 +44,16 @@ const AiCrmAnalytics = ({ darkMode }) => {
                                 }`}>
                                     <Filter className={`w-5 h-5 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
                                 </div>
-                                <h3 className="text-base font-bold sm:ml-3">Smart Data Processing</h3>
+                                <h3 className={`text-base font-bold sm:ml-3 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Smart Data Processing</h3>
                             </div>
                             <ul className="space-y-3">
                                 <li className="flex items-start">
                                     <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                    <span className="text-sm leading-relaxed">Automatic data cleansing and standardization</span>
+                                    <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Automatic data cleansing and standardization</span>
                                 </li>
                                 <li className="flex items-start">
                                     <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                    <span className="text-sm leading-relaxed">Duplicate detection and entity resolution</span>
+                                    <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Duplicate detection and entity resolution</span>
                                 </li>
                             </ul>
                         </div>
@@ -74,16 +74,16 @@ const AiCrmAnalytics = ({ darkMode }) => {
                                 }`}>
                                     <Calendar className={`w-5 h-5 ${darkMode ? 'text-green-400' : 'text-green-600'}`} />
                                 </div>
-                                <h3 className="text-base font-bold sm:ml-3">Relationship Analytics</h3>
+                                <h3 className={`text-base font-bold sm:ml-3 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Relationship Analytics</h3>
                             </div>
                             <ul className="space-y-3">
                                 <li className="flex items-start">
                                     <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                    <span className="text-sm leading-relaxed">Interaction frequency and engagement scoring</span>
+                                    <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Interaction frequency and engagement scoring</span>
                                 </li>
                                 <li className="flex items-start">
                                     <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                    <span className="text-sm leading-relaxed">Timeline visualization and trend analysis</span>
+                                    <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Timeline visualization and trend analysis</span>
                                 </li>
                             </ul>
                         </div>
@@ -104,16 +104,16 @@ const AiCrmAnalytics = ({ darkMode }) => {
                                 }`}>
                                     <User className={`w-5 h-5 ${darkMode ? 'text-purple-400' : 'text-purple-600'}`} />
                                 </div>
-                                <h3 className="text-base font-bold sm:ml-3">Natural Language Queries</h3>
+                                <h3 className={`text-base font-bold sm:ml-3 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Natural Language Queries</h3>
                             </div>
                             <ul className="space-y-3">
                                 <li className="flex items-start">
                                     <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                    <span className="text-sm leading-relaxed">Ask questions in plain English about your data</span>
+                                    <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Ask questions in plain English about your data</span>
                                 </li>
                                 <li className="flex items-start">
                                     <ChevronRight size={16} className="text-blue-600 mt-1 mr-3 flex-shrink-0 drop-shadow-sm" />
-                                    <span className="text-sm leading-relaxed">Complex multi-dimensional analysis queries</span>
+                                    <span className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>Complex multi-dimensional analysis queries</span>
                                 </li>
                             </ul>
                         </div>
@@ -137,7 +137,7 @@ const AiCrmAnalytics = ({ darkMode }) => {
                                 }`}>
                                     <Quote className={`w-5 h-5 sm:w-6 sm:h-6 ${darkMode ? 'text-indigo-400' : 'text-indigo-600'}`} />
                                 </div>
-                                <h3 className="text-lg font-bold sm:ml-4">Query Examples</h3>
+                                <h3 className={`text-lg font-bold sm:ml-4 ${darkMode ? 'text-white' : 'text-gray-800'}`}>Query Examples</h3>
                             </div>
 
                             <div className="space-y-6">
@@ -149,7 +149,7 @@ const AiCrmAnalytics = ({ darkMode }) => {
                                         # KOL Analysis
                                     </div>
                                     <div className={`p-3 sm:p-4 rounded-lg font-mono text-xs sm:text-sm shadow-inner overflow-x-auto ${
-                                        darkMode ? 'bg-gray-800 text-green-400' : 'bg-gray-900 text-green-400'
+                                        darkMode ? 'bg-gray-700 text-green-400' : 'bg-gray-900 text-green-400'
                                     }`}>
                                         "Show me top 10 KOLs in oncology with<br />
                                         highest engagement scores this quarter"
@@ -164,7 +164,7 @@ const AiCrmAnalytics = ({ darkMode }) => {
                                         # Interaction Tracking
                                     </div>
                                     <div className={`p-3 sm:p-4 rounded-lg font-mono text-xs sm:text-sm shadow-inner overflow-x-auto ${
-                                        darkMode ? 'bg-gray-800 text-green-400' : 'bg-gray-900 text-green-400'
+                                        darkMode ? 'bg-gray-700 text-green-400' : 'bg-gray-900 text-green-400'
                                     }`}>
                                         "List all medical affairs projects with<br />
                                         companies having &gt;5 interactions last month"
@@ -179,7 +179,7 @@ const AiCrmAnalytics = ({ darkMode }) => {
                                         # Relationship Insights
                                     </div>
                                     <div className={`p-3 sm:p-4 rounded-lg font-mono text-xs sm:text-sm shadow-inner overflow-x-auto ${
-                                        darkMode ? 'bg-gray-800 text-green-400' : 'bg-gray-900 text-green-400'
+                                        darkMode ? 'bg-gray-700 text-green-400' : 'bg-gray-900 text-green-400'
                                     }`}>
                                         "Analyze collaboration patterns between<br />
                                         pharma companies and academic institutions<br />
