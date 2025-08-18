@@ -187,88 +187,89 @@ const Header = ({ activeSection }) => {
                         </span>
                     </Link>
 
-                    {/* Desktop Navigation */}
-                    <nav className="hidden lg:flex items-center space-x-4">
-                        <NavLink
-                            title="Home"
-                            icon={<Home size={14} />}
-                            to="/"
-                        />
-                        <NavLink
-                            title="About"
-                            icon={<Info size={14} />}
-                            to="/about"
-                        />
+                    {/* Right Side Navigation & Controls */}
+                    <div className="flex items-center space-x-4">
+                        {/* Desktop Navigation - Moved to Right Side */}
+                        <nav className="hidden lg:flex items-center space-x-4">
+                            <NavLink
+                                title="Home"
+                                icon={<Home size={14} />}
+                                to="/"
+                            />
+                            <NavLink
+                                title="About"
+                                icon={<Info size={14} />}
+                                to="/about"
+                            />
 
-                        {/* Modules Dropdown */}
-                        <div className="relative" ref={modulesRef}>
-                            <button
-                                className={`
-                                    flex items-center space-x-1 px-3 py-2 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors relative text-sm
-                                    ${isModulesActive ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20' : ''}
-                                `}
-                                onClick={() => toggleDropdown('modules')}
-                            >
-                                <span>Modules</span>
-                                <ChevronDown size={14} className={`transition-transform ${dropdownOpen.modules ? 'rotate-180' : ''}`} />
-                                {isModulesActive && (
-                                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-blue-600 rounded-full"></div>
-                                )}
-                            </button>
+                            {/* Modules Dropdown */}
+                            <div className="relative" ref={modulesRef}>
+                                <button
+                                    className={`
+                                        flex items-center space-x-1 px-3 py-2 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors relative text-sm
+                                        ${isModulesActive ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20' : ''}
+                                    `}
+                                    onClick={() => toggleDropdown('modules')}
+                                >
+                                    <span>Modules</span>
+                                    <ChevronDown size={14} className={`transition-transform ${dropdownOpen.modules ? 'rotate-180' : ''}`} />
+                                    {isModulesActive && (
+                                        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-0.5 bg-blue-600 rounded-full"></div>
+                                    )}
+                                </button>
 
-                            {dropdownOpen.modules && (
-                                <div className={`absolute left-0 mt-2 w-64 ${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-md shadow-lg z-10 border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
-                                    <div className="py-2">
-                                        <DropdownItem
-                                            title="Xtract"
-                                            description="Scientific research & AI summarization"
-                                            to="/xtract"
-                                            onClick={closeDropdowns}
-                                        />
-                                        <DropdownItem
-                                            title="Atlas"
-                                            description="Agentic AI query monitoring"
-                                            to="/atlas"
-                                            onClick={closeDropdowns}
-                                        />
-                                        <DropdownItem
-                                            title="Workroom"
-                                            description="Team collaboration & content sharing"
-                                            to="/workroom"
-                                            onClick={closeDropdowns}
-                                        />
-                                        <DropdownItem
-                                            title="AI CRM"
-                                            description="Kol Managment"
-                                            to="/ai-crm"
-                                            onClick={closeDropdowns}
-                                        />
+                                {dropdownOpen.modules && (
+                                    <div className={`absolute right-0 mt-2 w-64 ${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-md shadow-lg z-10 border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                                        <div className="py-2">
+                                            <DropdownItem
+                                                title="Xtract"
+                                                description="Scientific research & AI summarization"
+                                                to="/xtract"
+                                                onClick={closeDropdowns}
+                                            />
+                                            <DropdownItem
+                                                title="Atlas"
+                                                description="Agentic AI query monitoring"
+                                                to="/atlas"
+                                                onClick={closeDropdowns}
+                                            />
+                                            <DropdownItem
+                                                title="Workroom"
+                                                description="Team collaboration & content sharing"
+                                                to="/workroom"
+                                                onClick={closeDropdowns}
+                                            />
+                                            <DropdownItem
+                                                title="AI CRM"
+                                                description="Kol Managment"
+                                                to="/ai-crm"
+                                                onClick={closeDropdowns}
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                            )}
-                        </div>
+                                )}
+                            </div>
 
-                        <NavLink
-                            title="Blogs"
-                            icon={<FileText size={14} />}
-                            to="/blogs"
-                        />
-                        <NavLink
-                            title="Request Demo"
-                            icon={<Phone size={14} />}
-                            to="/demo"
-                            isButton={true}
-                        />
-                        <NavLink
-                            title="Login"
-                            icon={<LogIn size={14} />}
-                            to="https://quantasight.com"
-                            external={true}
-                        />
-                    </nav>
+                            <NavLink
+                                title="Blogs"
+                                icon={<FileText size={14} />}
+                                to="/blogs"
+                            />
+                            <NavLink
+                                title="Request Demo"
+                                icon={<Phone size={14} />}
+                                to="/demo"
+                                isButton={true}
+                            />
+                            <NavLink
+                                title="Login"
+                                icon={<LogIn size={14} />}
+                                to="https://quantasight.com"
+                                external={true}
+                            />
+                        </nav>
 
-                    {/* Dark Mode Toggle & Mobile Menu Button */}
-                    <div className="flex items-center space-x-3">
+                        {/* Dark Mode Toggle */}
                         <button
                             onClick={toggleDarkMode}
                             className="p-2 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
@@ -277,6 +278,7 @@ const Header = ({ activeSection }) => {
                             {darkMode ? <Sun size={18} /> : <Moon size={18} />}
                         </button>
 
+                        {/* Mobile Menu Button */}
                         <button
                             className="lg:hidden p-2 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/20"
                             onClick={toggleMobileMenu}

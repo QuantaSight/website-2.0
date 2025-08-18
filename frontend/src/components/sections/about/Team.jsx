@@ -101,7 +101,7 @@ const Team = ({ darkMode }) => {
                     <h2 className={`text-2xl font-bold mb-3 ${
                         darkMode ? 'text-white' : 'text-gray-800'
                     }`}>
-                        Meet Our Leadership
+                        Meet Our Team
                     </h2>
                     <p className={`text-base max-w-2xl mx-auto ${
                         darkMode ? 'text-gray-400' : 'text-gray-600'
@@ -114,12 +114,12 @@ const Team = ({ darkMode }) => {
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12">
                     <TeamMember
                         name="Dr. Sameer Trikha"
-                        title="Founder & CEO"
+                        title="M.D & CEO"
                         image={founder}
                         location="London, UK"
                         linkdin="https://www.linkedin.com/in/sameer-trikha-1b987154/"
                         twitter="https://x.com/SameerTrikha"
-                        TeamLead="Founder"
+                        TeamLead="CEO"
                         darkMode={darkMode}
                     />
                     <TeamMember

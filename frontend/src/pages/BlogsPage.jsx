@@ -85,7 +85,7 @@ const BlogsPage = () => {
         }
     }, [activeBlogId]);
 
-    // Initial fetch (first page)
+    // Initial fetch (first page) - MODIFIED to make 7th blog featured
     const fetchInitialBlogs = async () => {
         try {
             setLoading(true);
@@ -96,11 +96,25 @@ const BlogsPage = () => {
             if (response.status === 'success') {
                 const transformedBlogs = response.data.map(transformBlogData);
 
-                // Set featured blog as the first/latest blog
-                if (transformedBlogs.length > 0) {
-                    setFeaturedBlog(transformedBlogs[0]);
-                    // Set remaining blogs for grid (excluding featured)
-                    setBlogs(transformedBlogs.slice(1));
+                // Set featured blog as the 7th blog (index 6)
+                if (transformedBlogs.length >= 7) {
+                    setFeaturedBlog(transformedBlogs[6]); // 7th blog (0-indexed)
+
+                    // Set remaining blogs for grid (excluding the 7th blog)
+                    const gridBlogs = [
+                        ...transformedBlogs.slice(0, 6),  // First 6 blogs (index 0-5)
+                        ...transformedBlogs.slice(7)      // Blogs after 7th (index 7+)
+                    ];
+                    setBlogs(gridBlogs);
+                } else if (transformedBlogs.length > 0) {
+                    // Fallback: if fewer than 7 blogs, use the last available blog as featured
+                    const lastIndex = transformedBlogs.length - 1;
+                    setFeaturedBlog(transformedBlogs[lastIndex]);
+                    setBlogs(transformedBlogs.slice(0, lastIndex));
+                } else {
+                    // No blogs available
+                    setFeaturedBlog(null);
+                    setBlogs([]);
                 }
 
                 setTotalPages(response.pagination.total_pages);
