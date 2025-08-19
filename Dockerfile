@@ -6,9 +6,10 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# Install frontend dependencies
+# Create .npmrc for frontend to handle peer deps
 COPY frontend/package*.json ./frontend/
-RUN cd frontend && npm install && npm install react-helmet-async --legacy-peer-deps
+RUN echo "legacy-peer-deps=true" > frontend/.npmrc
+RUN cd frontend && npm install
 
 # Install backend dependencies
 COPY backend/package*.json ./backend/
