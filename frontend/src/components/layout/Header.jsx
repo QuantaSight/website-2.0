@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
     Sun, Moon, Menu, X, ChevronDown, Brain,
-    Home, Info, FileText, Phone, LogIn
+    Home, Info, FileText, Phone, LogIn, Search,
+    Globe, Users
 } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import logo from '../../assets/images/qs_logo_small.png';
@@ -167,7 +168,7 @@ const Header = ({ activeSection }) => {
 
     // Check if modules section is active
     const location = useLocation();
-    const isModulesActive = ['/xtract', '/atlas', '/workroom'].includes(location.pathname);
+    const isModulesActive = ['/xtract', '/atlas', '/workroom', '/ai-crm'].includes(location.pathname);
 
     return (
         <header className={`sticky top-0 z-50 ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-md`}>
@@ -196,13 +197,8 @@ const Header = ({ activeSection }) => {
                                 icon={<Home size={14} />}
                                 to="/"
                             />
-                            <NavLink
-                                title="About"
-                                icon={<Info size={14} />}
-                                to="/about"
-                            />
 
-                            {/* Modules Dropdown */}
+                            {/* Modules Dropdown - MOVED BEFORE ABOUT */}
                             <div className="relative" ref={modulesRef}>
                                 <button
                                     className={`
@@ -250,6 +246,11 @@ const Header = ({ activeSection }) => {
                                 )}
                             </div>
 
+                            <NavLink
+                                title="About"
+                                icon={<Info size={14} />}
+                                to="/about"
+                            />
                             <NavLink
                                 title="Blogs"
                                 icon={<FileText size={14} />}
@@ -301,47 +302,39 @@ const Header = ({ activeSection }) => {
                                 to="/"
                                 onClick={closeMobileMenu}
                             />
+
+                            {/* Mobile Modules - Simple List Approach */}
+                            <MobileNavLink
+                                title="Xtract"
+                                icon={<Search size={16} />}
+                                to="/xtract"
+                                onClick={closeMobileMenu}
+                            />
+                            <MobileNavLink
+                                title="Atlas"
+                                icon={<Globe size={16} />}
+                                to="/atlas"
+                                onClick={closeMobileMenu}
+                            />
+                            <MobileNavLink
+                                title="Workroom"
+                                icon={<Users size={16} />}
+                                to="/workroom"
+                                onClick={closeMobileMenu}
+                            />
+                            <MobileNavLink
+                                title="AI CRM"
+                                icon={<Brain size={16} />}
+                                to="/ai-crm"
+                                onClick={closeMobileMenu}
+                            />
+
                             <MobileNavLink
                                 title="About"
                                 icon={<Info size={16} />}
                                 to="/about"
                                 onClick={closeMobileMenu}
                             />
-
-                            {/* Mobile Modules Dropdown */}
-                            <div>
-                                <button
-                                    className={`
-                                        w-full flex items-center justify-between px-4 py-3 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors text-sm
-                                        ${isModulesActive ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600' : ''}
-                                    `}
-                                    onClick={() => toggleDropdown('modules')}
-                                >
-                                    <span className="font-medium">Modules</span>
-                                    <ChevronDown size={16} className={`transition-transform ${dropdownOpen.modules ? 'rotate-180' : ''}`} />
-                                </button>
-
-                                {dropdownOpen.modules && (
-                                    <div className="pl-4 mt-2 space-y-1">
-                                        <MobileNavLink
-                                            title="Xtract"
-                                            to="/xtract"
-                                            onClick={closeMobileMenu}
-                                        />
-                                        <MobileNavLink
-                                            title="Atlas"
-                                            to="/atlas"
-                                            onClick={closeMobileMenu}
-                                        />
-                                        <MobileNavLink
-                                            title="Workroom"
-                                            to="/workroom"
-                                            onClick={closeMobileMenu}
-                                        />
-                                    </div>
-                                )}
-                            </div>
-
                             <MobileNavLink
                                 title="Blogs"
                                 icon={<FileText size={16} />}

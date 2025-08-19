@@ -65,9 +65,9 @@ const TestimonialCard = ({ quote, author, title, company, rating = 5 }) => {
 const Testimonials = ({ darkMode }) => {
     const testimonials = [
         {
-            quote: "QuantaSight gives us faster access to scientific insights, improves our KOL management, and saves our teams hours every week",
-            author: "From a Global Medical Affairs Director",
-            title: "Medical Affairs",
+            quote: "The QuantaSight platform gives me great insights into the KOLs I manage, allowing me to better tailor my relationships.",
+            author: "MSL lead",
+            title: "",
             // company: "BioPharma Global",
             // rating: 5
         },

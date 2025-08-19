@@ -59,7 +59,7 @@ const ContactCard = ({ darkMode }) => {
                 Contact us regarding your privacy and data protection
             </p>
             <a
-                href="mailto:info@quantasight.com"
+                href="mailto:support@quantasight.com"
                 className={`inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     darkMode
                         ? 'bg-blue-500/20 text-blue-400 hover:bg-blue-500/30'
@@ -67,7 +67,7 @@ const ContactCard = ({ darkMode }) => {
                 }`}
             >
                 <Mail className="w-4 h-4 mr-2" />
-                info@quantasight.com
+                support@quantasight.com
             </a>
         </div>
     );
@@ -119,7 +119,7 @@ const PrivacyPolicyPage = () => {
                             <div className="text-center">
                                 <Mail className={`w-5 h-5 mx-auto mb-2 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`} />
                                 <div className="text-sm font-medium">Contact</div>
-                                <div className="text-xs text-gray-500">info@quantasight.com</div>
+                                <div className="text-xs text-gray-500">support@quantasight.com</div>
                             </div>
                         </div>
                     </div>
@@ -194,7 +194,7 @@ const PrivacyPolicyPage = () => {
                             <li>Opt out of future communications</li>
                         </ul>
                         <p className="text-sm leading-relaxed">
-                            To exercise any of these rights, contact us at <strong>info@quantasight.com</strong>.
+                            To exercise any of these rights, contact us at <strong>support@quantasight.com</strong>.
                         </p>
                     </PolicySection>
 
@@ -215,7 +215,7 @@ const PrivacyPolicyPage = () => {
                             If you have any questions or concerns about this Privacy Policy or how your data is used, please contact us at:
                         </p>
                         <div className="space-y-2 text-sm">
-                            <p><strong>Email:</strong> <strong>info@quantasight.com</strong></p>
+                            <p><strong>Email:</strong> <strong>support@quantasight.com</strong></p>
                             <p><strong>Company:</strong> QuantaSight Ltd, London, UK</p>
                         </div>
                     </PolicySection>
