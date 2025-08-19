@@ -19,7 +19,7 @@ import './styles/animations.css';
 const App = () => {
     return (
         <ThemeProvider>
-            <Router basename="/website">
+            <Router>
                 <ScrollToTop />
                 <MainLayout>
                     <Routes>

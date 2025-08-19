@@ -17,7 +17,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // Production
 export default defineConfig({
-    base: '/website/',
     plugins: [
         react(),
         tailwindcss()
