@@ -1,0 +1,45 @@
+{
+  "name": "QuantaSight - AI Medical Research Platform",
+  "short_name": "QuantaSight",
+  "description": "AI-powered medical research platform for healthcare professionals",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["medical", "healthcare", "research", "productivity"],
+  "icons": [
+    {
+      "src": "/qs_logo_small.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/qs_logo_small.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "QuantaSight Desktop View"
+    },
+    {
+      "src": "/images/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "QuantaSight Mobile View"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

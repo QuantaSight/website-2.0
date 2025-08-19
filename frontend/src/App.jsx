@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async'; // Add this import
 import { ThemeProvider } from './context/ThemeContext';
 import MainLayout from './components/layout/MainLayout';
 import ScrollToTop from './components/common/ScrollToTop';
@@ -18,26 +19,28 @@ import './styles/animations.css';
 
 const App = () => {
     return (
-        <ThemeProvider>
-            <Router>
-                <ScrollToTop />
-                <MainLayout>
-                    <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/xtract" element={<XtractPage />} />
-                        <Route path="/ai-crm" element={<AiCrmPage />} />
-                        <Route path="/atlas" element={<AtlasPage />} />
-                        <Route path="/workroom" element={<WorkroomPage />} />
-                        <Route path="/blogs" element={<BlogsPage />} />
-                        <Route path="/demo" element={<DemoPage />} />
-                        <Route path="/login" element={<LoginPage />} />
-                        <Route path="/privacy" element={<PrivacyPolicyPage />} />
-                        <Route path="*" element={<HomePage />} />
-                    </Routes>
-                </MainLayout>
-            </Router>
-        </ThemeProvider>
+        <HelmetProvider>
+            <ThemeProvider>
+                <Router>
+                    <ScrollToTop />
+                    <MainLayout>
+                        <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/about" element={<AboutPage />} />
+                            <Route path="/xtract" element={<XtractPage />} />
+                            <Route path="/ai-crm" element={<AiCrmPage />} />
+                            <Route path="/atlas" element={<AtlasPage />} />
+                            <Route path="/workroom" element={<WorkroomPage />} />
+                            <Route path="/blogs" element={<BlogsPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/login" element={<LoginPage />} />
+                            <Route path="/privacy" element={<PrivacyPolicyPage />} />
+                            <Route path="*" element={<HomePage />} />
+                        </Routes>
+                    </MainLayout>
+                </Router>
+            </ThemeProvider>
+        </HelmetProvider>
     );
 };
 

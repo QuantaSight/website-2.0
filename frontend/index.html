@@ -1,13 +1,150 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/qs_logo_small.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quantasight</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Favicon and Icons -->
+  <link rel="icon" type="image/png" href="/qs_logo_small.png" />
+  <link rel="apple-touch-icon" href="/qs_logo_small.png" />
+
+  <!-- Viewport and Mobile Optimization -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  <!-- Performance Optimizations - Preconnect to external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- DNS Prefetch for faster loading -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+
+  <!-- Default SEO Meta Tags (will be overridden by react-helmet-async) -->
+  <title>QuantaSight - AI-Powered Medical Research Platform</title>
+  <meta name="description" content="The most advanced AI-powered medical research platform for healthcare professionals. Medical search engine, KOL identification, pharma pipeline analysis, and clinical research tools. Transform weeks of research into minutes with AI." />
+  <meta name="keywords" content="medical search engine, AI-powered medical research platform, healthcare research search tool, clinical research search engine, KOL identification platform, pharma pipeline database, AI for medical research, medical literature search" />
+  <meta name="author" content="QuantaSight" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <!-- Open Graph Meta Tags (Social Media) -->
+  <meta property="og:title" content="QuantaSight - AI-Powered Medical Research Platform" />
+  <meta property="og:description" content="The most advanced AI-powered medical research platform for healthcare professionals. Transform weeks of research into minutes with AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://quantasight.com" />
+  <meta property="og:image" content="https://quantasight.com/images/quantasight-og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="QuantaSight" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QuantaSight - AI-Powered Medical Research Platform" />
+  <meta name="twitter:description" content="The most advanced AI-powered medical research platform for healthcare professionals. Transform weeks of research into minutes with AI." />
+  <meta name="twitter:image" content="https://quantasight.com/images/quantasight-og-default.jpg" />
+  <meta name="twitter:site" content="@quantasight" />
+  <meta name="twitter:creator" content="@quantasight" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://quantasight.com" />
+
+  <!-- Additional SEO Meta Tags -->
+  <meta name="application-name" content="QuantaSight" />
+  <meta name="msapplication-TileColor" content="#2563eb" />
+  <meta name="msapplication-config" content="/browserconfig.xml" />
+
+  <!-- Medical/Healthcare Specific Meta Tags -->
+  <meta name="category" content="Medical Technology" />
+  <meta name="coverage" content="Worldwide" />
+  <meta name="distribution" content="Global" />
+  <meta name="rating" content="General" />
+
+  <!-- Structured Data for Organization -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "QuantaSight",
+      "url": "https://quantasight.com",
+      "logo": "https://quantasight.com/qs_logo_small.png",
+      "description": "AI-powered medical research platform for healthcare professionals, clinical researchers, and pharmaceutical companies.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB",
+        "addressLocality": "London"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+44-XXX-XXX-XXXX",
+        "contactType": "customer service",
+        "email": "support@quantasight.com"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/quantasight",
+        "https://twitter.com/quantasight"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Sameer Trikha"
+      }
+    }
+  </script>
+
+  <!-- Website Schema -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "QuantaSight",
+      "url": "https://quantasight.com",
+      "description": "AI-powered medical research platform",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://quantasight.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="/src/main.jsx" as="script" />
+  <link rel="preload" href="/src/styles/globals.css" as="style" />
+</head>
+<body>
+
+
+<!-- Main Application Root -->
+<div id="root"></div>
+
+<!-- Main Application Script -->
+<script type="module" src="/src/main.jsx"></script>
+
+<!-- Service Worker Registration (for PWA capabilities) -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js')
+              .then(function(registration) {
+                console.log('SW registered: ', registration);
+              })
+              .catch(function(registrationError) {
+                console.log('SW registration failed: ', registrationError);
+              });
+    });
+  }
+</script>
+
+<!-- No Script Fallback -->
+<noscript>
+  <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+    <h1>QuantaSight - AI-Powered Medical Research Platform</h1>
+    <p>This application requires JavaScript to run. Please enable JavaScript in your browser to access the full QuantaSight medical research platform.</p>
+    <p>QuantaSight provides advanced AI-powered tools for medical research, including medical search engine, KOL identification, and pharmaceutical pipeline analysis.</p>
+  </div>
+</noscript>
+</body>
 </html>

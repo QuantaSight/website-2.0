@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /web/
+Disallow: /login
+Disallow: /api/
+Disallow: /_vite/
+
+# Allow specific crawlers for medical content
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+# Sitemap location
+Sitemap: https://quantasight.com/sitemap.xml
+
+# Additional medical/health crawlers
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
