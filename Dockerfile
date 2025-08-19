@@ -8,7 +8,7 @@ RUN npm install
 
 # Install frontend dependencies
 COPY frontend/package*.json ./frontend/
-RUN cd frontend && npm install
+RUN cd frontend && npm install && npm install react-helmet-async --legacy-peer-deps
 
 # Install backend dependencies
 COPY backend/package*.json ./backend/
