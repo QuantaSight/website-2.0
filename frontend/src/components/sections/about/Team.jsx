@@ -4,12 +4,10 @@ import SocialButton from '../../common/SocialButton';
 import founder from "../../../assets/images/Founder.png";
 import cto from "../../../assets/images/cto.jpg";
 
-// Enhanced TeamMember component with professional styling and icon fallback
-const TeamMember = ({ name, title, image, linkdin, twitter, location, TeamLead, darkMode }) => {
+const TeamMember = ({ name, title, image, linkdin, twitter, location, TeamLead, darkMode, index }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
 
-    // Check if we have a valid image URL (not placeholder)
     const hasValidImage = image &&
         !image.includes('placeholder') &&
         !image.includes('/api/placeholder') &&
@@ -26,8 +24,9 @@ const TeamMember = ({ name, title, image, linkdin, twitter, location, TeamLead, 
     };
 
     return (
-        <div className={`professional-card p-5 sm:p-6 text-center group transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl`} style={{
-            boxShadow: '0 8px 20px -6px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6)'
+        <div className={`scale-in professional-card p-5 sm:p-6 text-center group transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl`} style={{
+            boxShadow: '0 8px 20px -6px rgba(59, 130, 246, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.6)',
+            transitionDelay: `${index * 0.1}s`
         }}>
             <div className="relative mb-6">
                 <div className="rounded-full overflow-hidden w-20 h-20 sm:w-24 sm:h-24 mx-auto relative shadow-lg group-hover:shadow-xl transition-all duration-300">
@@ -43,14 +42,12 @@ const TeamMember = ({ name, title, image, linkdin, twitter, location, TeamLead, 
                             <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
                         </>
                     ) : (
-                        // Fallback icon when no image is available
                         <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-800 dark:to-blue-900 flex items-center justify-center transition duration-300 group-hover:from-blue-200 group-hover:to-blue-300 dark:group-hover:from-blue-700 dark:group-hover:to-blue-800">
                             <User className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600 dark:text-blue-400 transition duration-300 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
                         </div>
                     )}
 
-                    {/* Hidden image for loading check if we have an image */}
                     {hasValidImage && !imageLoaded && (
                         <img
                             src={image}
@@ -61,7 +58,6 @@ const TeamMember = ({ name, title, image, linkdin, twitter, location, TeamLead, 
                         />
                     )}
                 </div>
-                {/* Professional badge */}
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 px-2 py-1 glass-light rounded-full text-xs font-medium text-blue-700 shadow-lg opacity-0 group-hover:opacity-100 transition-all duration-300">
                     {TeamLead}
                 </div>
@@ -90,29 +86,28 @@ const Team = ({ darkMode }) => {
     return (
         <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-800' : 'bg-gradient-to-b from-white to-blue-50/30'}`}>
             <div className="main-container">
-                {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
-                    <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
+                    <div className={`slide-up inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
                         <Users className="w-3 h-3 mr-2" />
                         Leadership Team
                     </div>
-                    <h2 className={`text-2xl font-bold mb-3 ${
+                    <h2 className={`slide-up stagger-1 text-2xl font-bold mb-3 ${
                         darkMode ? 'text-white' : 'text-gray-800'
                     }`}>
                         Meet Our Team
                     </h2>
-                    <p className={`text-base max-w-2xl mx-auto ${
+                    <p className={`slide-up stagger-2 text-base max-w-2xl mx-auto ${
                         darkMode ? 'text-gray-400' : 'text-gray-600'
                     }`}>
                         A diverse group of experts in AI, healthcare, and pharmaceutical sciences leading the future of medical research
                     </p>
                 </div>
 
-                {/* Team Grid - Increased spacing between cards */}
                 <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12">
                     <TeamMember
+                        index={0}
                         name="Dr. Sameer Trikha"
                         title="M.D & CEO"
                         image={founder}
@@ -123,6 +118,7 @@ const Team = ({ darkMode }) => {
                         darkMode={darkMode}
                     />
                     <TeamMember
+                        index={1}
                         name="Ayush Mishra"
                         title="Chief Technology Officer"
                         image={cto}
@@ -133,6 +129,7 @@ const Team = ({ darkMode }) => {
                         darkMode={darkMode}
                     />
                     <TeamMember
+                        index={2}
                         name="Bhargav Sri Sai"
                         title="Data Scientist"
                         image="/api/placeholder/200/200"
@@ -143,6 +140,7 @@ const Team = ({ darkMode }) => {
                         darkMode={darkMode}
                     />
                     <TeamMember
+                        index={3}
                         name="Kevin Patel"
                         title="Software Developer"
                         image="/api/placeholder/200/200"

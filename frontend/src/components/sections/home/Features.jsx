@@ -3,11 +3,11 @@ import { Database, Users, Award } from 'lucide-react';
 import { useTheme } from "../../../context/ThemeContext.jsx";
 
 // Professional FeatureCard with enhanced glassmorphism and shadows
-const FeatureCard = ({ title, subtitle, description, icon }) => {
+const FeatureCard = ({ title, subtitle, description, icon, index = 0 }) => {
     const { darkMode } = useTheme();
 
     return (
-        <div className={`professional-card group hover:-translate-y-1 min-h-[260px] sm:min-h-[280px] flex flex-col transition-all duration-300 p-6 sm:p-8 ${
+        <div className={`scale-in stagger-${index} professional-card group hover:-translate-y-1 min-h-[260px] sm:min-h-[280px] flex flex-col transition-all duration-300 p-6 sm:p-8 ${
             darkMode
                 ? 'glass-dark text-white shadow-xl shadow-gray-900/20 hover:shadow-2xl hover:shadow-gray-900/30'
                 : 'glass-card text-gray-800 shadow-xl shadow-blue-100/50 hover:shadow-2xl hover:shadow-blue-200/60'
@@ -45,18 +45,18 @@ const Features = ({ darkMode }) => {
         <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-gray-50/50 to-white'}`}>
             <div className="main-container">
                 <div className="text-center mb-12 sm:mb-16">
-                    <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
+                    <div className={`slide-up inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
                         <Database className="w-3 h-3 mr-2" />
                         Core Features
                     </div>
-                    <h2 className={`text-2xl font-bold mb-3 ${
+                    <h2 className={`slide-up stagger-1 text-2xl font-bold mb-3 ${
                         darkMode ? 'text-white' : 'text-gray-800'
                     }`}>
                         Built for Scientific Excellence
                     </h2>
-                    <p className={`text-base max-w-2xl mx-auto ${
+                    <p className={`slide-up stagger-2 text-base max-w-2xl mx-auto ${
                         darkMode ? 'text-gray-400' : 'text-gray-600'
                     }`}>
                         Powerful features designed to accelerate pharmaceutical research and enhance collaboration across scientific teams
@@ -69,6 +69,7 @@ const Features = ({ darkMode }) => {
                         subtitle="Accelerated Discovery"
                         description="Transform complex research tasks from weeks to minutes using advanced AI algorithms specifically trained for pharmaceutical and life sciences applications."
                         icon={<Database />}
+                        index={0}
                     />
 
                     <FeatureCard
@@ -76,6 +77,7 @@ const Features = ({ darkMode }) => {
                         subtitle="Enhanced Teamwork"
                         description="Enable effortless collaboration across departments with secure sharing, real-time editing, and comprehensive version control for all research materials."
                         icon={<Users />}
+                        index={1}
                     />
 
                     <FeatureCard
@@ -83,11 +85,12 @@ const Features = ({ darkMode }) => {
                         subtitle="FDA-Ready Documentation"
                         description="Ensure all research outputs meet regulatory standards with built-in compliance checks, audit trails, and professionally formatted documentation."
                         icon={<Award />}
+                        index={2}
                     />
                 </div>
 
                 {/* Trust indicators */}
-                <div className="mt-12 sm:mt-16 pt-8 border-t border-gray-200/50">
+                <div className="slide-in-right stagger-3 mt-12 sm:mt-16 pt-8 border-t border-gray-200/50">
                     <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-lg text-gray-500">
                         <div className="flex items-center">
                             <div className="w-2 h-2 bg-green-500 rounded-full mr-2 shadow-lg shadow-green-500/50"></div>

@@ -26,25 +26,23 @@ const CTASection = ({ darkMode }) => {
                         <div className="flex flex-col lg:flex-row items-center gap-8">
                             <div className="lg:w-2/3 text-center lg:text-left">
                                 {/* Badge */}
-                                <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
+                                <div className={`slide-up inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                                     darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                                 }`}>
                                     <Calendar className="w-3 h-3 mr-2" />
                                     Ready to Get Started?
                                 </div>
 
-                                <h2 className="text-xl sm:text-2xl font-bold mb-4">
+                                <h2 className="slide-up stagger-1 text-xl sm:text-2xl font-bold mb-4">
                                     Accelerate Your Research Today
                                 </h2>
 
-                                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 max-w-lg mx-auto lg:mx-0">
+                                <p className="slide-up stagger-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 max-w-lg mx-auto lg:mx-0">
                                     Join leading pharmaceutical companies using QuantaSight to transform their research workflows. Schedule a personalized demonstration tailored to your team's specific needs.
                                 </p>
 
                                 {/* Features list */}
-                                <div className="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-6 text-xs sm:text-sm">
-
-
+                                <div className="scale-in stagger-3 flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-6 text-xs sm:text-sm">
                                     <div className="flex items-center justify-center lg:justify-start">
                                         <Clock className="w-4 h-4 text-green-500 mr-2 drop-shadow-sm" />
                                         <span>30-min Demo</span>
@@ -55,7 +53,7 @@ const CTASection = ({ darkMode }) => {
                                     </div>
                                 </div>
 
-                                <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                                <div className="slide-up stagger-4 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                                     <Link
                                         to="/demo"
                                         className="inline-flex items-center justify-center px-4 sm:px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-medium rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5"
@@ -83,7 +81,7 @@ const CTASection = ({ darkMode }) => {
                             <div className="lg:w-1/3 flex justify-center">
                                 <div className="relative">
                                     {/* Main illustration container */}
-                                    <div className={`p-6 sm:p-8 rounded-2xl transition-all duration-300 ${
+                                    <div className={`slide-in-right p-6 sm:p-8 rounded-2xl transition-all duration-300 ${
                                         darkMode
                                             ? 'glass-dark shadow-xl shadow-gray-900/20'
                                             : 'glass-card shadow-xl shadow-blue-100/50'
@@ -103,7 +101,7 @@ const CTASection = ({ darkMode }) => {
                                     </div>
 
                                     {/* Floating elements */}
-                                    <div className={`absolute -top-2 -right-2 glass-light rounded-lg px-2 py-1 text-xs font-medium text-blue-700 shadow-lg animate-bounce ${
+                                    <div className={`slide-in-right stagger-1 absolute -top-2 -right-2 glass-light rounded-lg px-2 py-1 text-xs font-medium text-blue-700 shadow-lg animate-bounce ${
                                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-200/50'
                                     }`}>
                                         Free Demo
@@ -113,18 +111,6 @@ const CTASection = ({ darkMode }) => {
                         </div>
                     </div>
                 </div>
-
-                {/* Trust indicators */}
-                {/*<div className="mt-8 text-center">*/}
-                {/*    <p className="text-sm text-gray-500 mb-4">Trusted by teams at</p>*/}
-                {/*    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 opacity-60">*/}
-                {/*        <div className="text-sm font-medium">Global Pharma Inc.</div>*/}
-                {/*        <div className="w-1 h-1 bg-gray-400 rounded-full shadow-sm"></div>*/}
-                {/*        <div className="text-sm font-medium">BioScience Solutions</div>*/}
-                {/*        <div className="w-1 h-1 bg-gray-400 rounded-full shadow-sm"></div>*/}
-                {/*        <div className="text-sm font-medium">MedTech Innovations</div>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
             </div>
         </section>
     );

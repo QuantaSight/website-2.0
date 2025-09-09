@@ -3,9 +3,11 @@ import { useTheme } from '../context/ThemeContext';
 import AtlasHero from '../components/sections/atlas/AtlasHero';
 import AtlasFeatures from '../components/sections/atlas/AtlasFeatures';
 import AtlasDashboard from '../components/sections/atlas/AtlasDashboard';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const AtlasPage = () => {
     const { darkMode } = useTheme();
+    useScrollAnimation();
 
     return (
         <div>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Zap, AlertTriangle, ArrowRight } from 'lucide-react';
 
-// Professional Button Component
 const PrimaryButton = ({ to, children, onClick, fullWidth = false }) => {
     const baseClasses = `px-4 sm:px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-medium rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 ${
         fullWidth ? 'w-full' : ''
@@ -40,15 +39,14 @@ const AtlasHero = ({ darkMode }) => {
             <div className="main-container">
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                     <div className="lg:w-1/2 text-center lg:text-left">
-                        {/* Module badge */}
-                        <div className={`inline-flex items-center px-3 sm:px-4 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
+                        <div className={`slide-up inline-flex items-center px-3 sm:px-4 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
                             darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                         }`}>
                             <Shield className="w-3 h-3 mr-2" />
                             Pharmacovigilance Module
                         </div>
 
-                        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                        <h1 className="slide-up stagger-1 text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
                                 Pharmacovigilance Atlas
                             </span>
@@ -58,14 +56,13 @@ const AtlasHero = ({ darkMode }) => {
                             </span>
                         </h1>
 
-                        <p className={`text-sm sm:text-base lg:text-lg mb-8 leading-relaxed ${
+                        <p className={`slide-up stagger-2 text-sm sm:text-base lg:text-lg mb-8 leading-relaxed ${
                             darkMode ? 'text-gray-300' : 'text-gray-600'
                         } max-w-lg mx-auto lg:mx-0`}>
                             Agentic AI to monitor for signals as part of post-market surveillance. Identify potential safety concerns earlier with automated monitoring and analysis.
                         </p>
 
-                        {/* Key benefits */}
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                        <div className="scale-in stagger-3 grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                             <div className={`p-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl ${
                                 darkMode ? 'glass-dark shadow-gray-900/20' : 'glass-light shadow-blue-100/40'
                             }`}>
@@ -89,20 +86,19 @@ const AtlasHero = ({ darkMode }) => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <div className="slide-up stagger-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <PrimaryButton to="/demo">
-        <span className="inline-flex items-center">
-            Request Demo
-            <ArrowRight className="w-4 h-4 ml-2" />
-        </span>
+                                <span className="inline-flex items-center">
+                                    Request Demo
+                                    <ArrowRight className="w-4 h-4 ml-2" />
+                                </span>
                             </PrimaryButton>
                         </div>
                     </div>
 
                     <div className="lg:w-1/2 flex justify-center">
                         <div className="relative w-full max-w-md">
-                            {/* Enhanced demo container */}
-                            <div className={`professional-card p-6 sm:p-8 transform hover:scale-105 transition-all duration-500 shadow-xl ${
+                            <div className={`slide-in-right professional-card p-6 sm:p-8 transform hover:scale-105 transition-all duration-500 shadow-xl ${
                                 darkMode
                                     ? 'glass-dark shadow-gray-900/25 hover:shadow-2xl hover:shadow-gray-900/40'
                                     : 'glass-card shadow-blue-100/60 hover:shadow-2xl hover:shadow-blue-200/70'
@@ -111,7 +107,6 @@ const AtlasHero = ({ darkMode }) => {
                                     ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                                     : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
                             }}>
-                                {/* Mock interface */}
                                 <div className="space-y-4">
                                     <div className="flex items-center justify-between">
                                         <div className="text-sm font-medium">Safety Monitoring</div>
@@ -144,20 +139,18 @@ const AtlasHero = ({ darkMode }) => {
                                 </div>
                             </div>
 
-                            {/* Floating stats */}
-                            <div className={`absolute -top-3 -right-3 glass-light rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium shadow-lg ${
+                            <div className={`slide-in-right stagger-1 absolute -top-3 -right-3 glass-light rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium shadow-lg ${
                                 darkMode ? 'text-green-400 shadow-gray-800/30' : 'text-green-700 shadow-green-200/50'
                             }`}>
                                 99.2% Uptime
                             </div>
 
-                            <div className={`absolute -bottom-3 -left-3 glass-light rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium shadow-lg ${
+                            <div className={`slide-in-left stagger-2 absolute -bottom-3 -left-3 glass-light rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium shadow-lg ${
                                 darkMode ? 'text-blue-400 shadow-gray-800/30' : 'text-blue-700 shadow-blue-200/50'
                             }`}>
                                 Real-time Analysis
                             </div>
 
-                            {/* Background elements */}
                             <div className="absolute -z-10 top-10 right-10 w-24 sm:w-32 h-24 sm:h-32 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
                             <div className="absolute -z-10 bottom-10 left-10 w-20 sm:w-24 h-20 sm:h-24 bg-purple-400/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
                         </div>

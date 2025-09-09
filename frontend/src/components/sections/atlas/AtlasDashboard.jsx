@@ -5,20 +5,19 @@ const AtlasDashboard = ({ darkMode }) => {
     return (
         <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-800' : 'bg-gradient-to-b from-white to-blue-50/30'}`}>
             <div className="main-container">
-                {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
-                    <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
+                    <div className={`slide-up inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
                         <BarChart3 className="w-3 h-3 mr-2" />
                         Dashboard Interface
                     </div>
-                    <h2 className={`text-2xl font-bold mb-3 ${
+                    <h2 className={`slide-up stagger-1 text-2xl font-bold mb-3 ${
                         darkMode ? 'text-white' : 'text-gray-800'
                     }`}>
                         Comprehensive Dashboard
                     </h2>
-                    <p className={`text-base max-w-2xl mx-auto ${
+                    <p className={`slide-up stagger-2 text-base max-w-2xl mx-auto ${
                         darkMode ? 'text-gray-400' : 'text-gray-600'
                     }`}>
                         Our intuitive dashboard provides a central hub for monitoring all pharmacovigilance activities. Track signal trends, manage case assessments, and generate regulatory reports with ease.
@@ -26,8 +25,7 @@ const AtlasDashboard = ({ darkMode }) => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10 sm:mb-12">
-                    {/* Features List */}
-                    <div className={`professional-card p-6 sm:p-8 transition-all duration-300 shadow-xl hover:shadow-2xl ${
+                    <div className={`scale-in professional-card p-6 sm:p-8 transition-all duration-300 shadow-xl hover:shadow-2xl ${
                         darkMode
                             ? 'glass-dark shadow-gray-900/25 hover:shadow-gray-900/40'
                             : 'glass-card shadow-blue-100/60 hover:shadow-blue-200/70'
@@ -105,12 +103,11 @@ const AtlasDashboard = ({ darkMode }) => {
                     </div>
 
                     <div className="space-y-6">
-                        {/* Real-time Monitoring */}
-                        <div className={`professional-card p-5 sm:p-6 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 ${
+                        <div className={`slide-in-right professional-card p-5 sm:p-6 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 ${
                             darkMode
                                 ? 'glass-dark shadow-gray-900/20'
                                 : 'glass-light shadow-blue-100/40'
-                        }`}>
+                        }`} style={{ transitionDelay: '0s' }}>
                             <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
                                 <div className={`p-3 rounded-xl mr-0 sm:mr-4 mb-3 sm:mb-0 ${
                                     darkMode ? 'bg-blue-500/20' : 'bg-blue-50'
@@ -127,12 +124,11 @@ const AtlasDashboard = ({ darkMode }) => {
                             </p>
                         </div>
 
-                        {/* Report Generation */}
-                        <div className={`professional-card p-5 sm:p-6 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 ${
+                        <div className={`slide-in-right stagger-1 professional-card p-5 sm:p-6 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 ${
                             darkMode
                                 ? 'glass-dark shadow-gray-900/20'
                                 : 'glass-light shadow-blue-100/40'
-                        }`}>
+                        }`} style={{ transitionDelay: '0.1s' }}>
                             <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
                                 <div className={`p-3 rounded-xl mr-0 sm:mr-4 mb-3 sm:mb-0 ${
                                     darkMode ? 'bg-green-500/20' : 'bg-green-50'
@@ -149,12 +145,11 @@ const AtlasDashboard = ({ darkMode }) => {
                             </p>
                         </div>
 
-                        {/* Security & Compliance */}
-                        <div className={`professional-card p-5 sm:p-6 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 ${
+                        <div className={`slide-in-right stagger-2 professional-card p-5 sm:p-6 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 ${
                             darkMode
                                 ? 'glass-dark shadow-gray-900/20'
                                 : 'glass-light shadow-blue-100/40'
-                        }`}>
+                        }`} style={{ transitionDelay: '0.2s' }}>
                             <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
                                 <div className={`p-3 rounded-xl mr-0 sm:mr-4 mb-3 sm:mb-0 ${
                                     darkMode ? 'bg-purple-500/20' : 'bg-purple-50'
@@ -172,33 +167,6 @@ const AtlasDashboard = ({ darkMode }) => {
                         </div>
                     </div>
                 </div>
-
-                {/* Dashboard Stats */}
-                {/*<div className={`professional-card p-6 sm:p-8 text-center transition-all duration-300 shadow-lg hover:shadow-xl ${*/}
-                {/*    darkMode*/}
-                {/*        ? 'glass-dark shadow-gray-900/20'*/}
-                {/*        : 'glass-light shadow-blue-100/40'*/}
-                {/*}`}>*/}
-                {/*    <h3 className="text-lg font-semibold mb-6">Dashboard Performance</h3>*/}
-                {/*    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">*/}
-                {/*        <div>*/}
-                {/*            <div className="text-xl sm:text-2xl font-bold text-blue-600 mb-1 drop-shadow-sm">350ms</div>*/}
-                {/*            <div className="text-xs text-gray-500">Average Load Time</div>*/}
-                {/*        </div>*/}
-                {/*        <div>*/}
-                {/*            <div className="text-xl sm:text-2xl font-bold text-green-600 mb-1 drop-shadow-sm">99.9%</div>*/}
-                {/*            <div className="text-xs text-gray-500">Uptime SLA</div>*/}
-                {/*        </div>*/}
-                {/*        <div>*/}
-                {/*            <div className="text-xl sm:text-2xl font-bold text-purple-600 mb-1 drop-shadow-sm">50+</div>*/}
-                {/*            <div className="text-xs text-gray-500">Widget Types</div>*/}
-                {/*        </div>*/}
-                {/*        <div>*/}
-                {/*            <div className="text-xl sm:text-2xl font-bold text-indigo-600 mb-1 drop-shadow-sm">Custom</div>*/}
-                {/*            <div className="text-xs text-gray-500">Dashboards</div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
             </div>
         </section>
     );

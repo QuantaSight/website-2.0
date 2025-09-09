@@ -5,9 +5,12 @@ import Features from '../components/sections/home/Features';
 import ModulesOverview from '../components/sections/home/ModulesOverview';
 import CTASection from '../components/sections/home/CTASection';
 import Testimonials from '../components/sections/home/Testimonials';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const HomePage = () => {
     const { darkMode } = useTheme();
+
+    useScrollAnimation();
 
     return (
         <div>

@@ -15,15 +15,14 @@ const XtractHero = ({ darkMode }) => {
             <div className="main-container">
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                     <div className="lg:w-1/2 text-center lg:text-left">
-                        {/* Module badge */}
-                        <div className={`inline-flex items-center px-3 sm:px-4 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
+                        <div className={`slide-up inline-flex items-center px-3 sm:px-4 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
                             darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                         }`}>
                             <FileText className="w-3 h-3 mr-2" />
                             AI Research Module
                         </div>
 
-                        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                        <h1 className="slide-up stagger-1 text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
                                 Xtract
                             </span>
@@ -33,14 +32,13 @@ const XtractHero = ({ darkMode }) => {
                             </span>
                         </h1>
 
-                        <p className={`text-sm sm:text-base lg:text-lg mb-8 leading-relaxed ${
+                        <p className={`slide-up stagger-2 text-sm sm:text-base lg:text-lg mb-8 leading-relaxed ${
                             darkMode ? 'text-gray-300' : 'text-gray-600'
                         } max-w-lg mx-auto lg:mx-0`}>
                             Extract, analyze, and synthesize insights from scientific literature, clinical trials, patents, and regulatory guidelines with unprecedented speed and accuracy.
                         </p>
 
-                        {/* Enhanced Key benefits */}
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                        <div className="scale-in stagger-3 grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                             <div className={`p-4 sm:p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
                                 darkMode
                                     ? 'glass-dark shadow-gray-900/20'
@@ -70,7 +68,7 @@ const XtractHero = ({ darkMode }) => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <div className="slide-up stagger-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <Link
                                 to="/demo"
                                 className="inline-flex items-center justify-center px-4 sm:px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-medium rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5"
@@ -81,14 +79,12 @@ const XtractHero = ({ darkMode }) => {
                                 Try Xtract
                                 <ArrowRight className="w-4 h-4 ml-2" />
                             </Link>
-
                         </div>
                     </div>
 
                     <div className="lg:w-1/2 flex justify-center">
                         <div className="relative w-full max-w-md">
-                            {/* Enhanced Main demo container */}
-                            <div className={`professional-card p-6 sm:p-8 transform hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl ${
+                            <div className={`slide-in-right professional-card p-6 sm:p-8 transform hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl ${
                                 darkMode
                                     ? 'glass-dark shadow-gray-900/25'
                                     : 'glass-card shadow-blue-100/60'
@@ -97,7 +93,6 @@ const XtractHero = ({ darkMode }) => {
                                     ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                                     : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
                             }}>
-                                {/* Mock interface */}
                                 <div className="space-y-4 sm:space-y-5">
                                     <div className="flex items-center justify-between">
                                         <div className="text-sm font-medium">Research Query</div>
@@ -130,20 +125,18 @@ const XtractHero = ({ darkMode }) => {
                                 </div>
                             </div>
 
-                            {/* Enhanced Floating stats */}
-                            <div className={`absolute -top-3 -right-3 glass-light rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium text-green-700 shadow-xl ${
+                            <div className={`slide-in-right stagger-1 absolute -top-3 -right-3 glass-light rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium text-green-700 shadow-xl ${
                                 darkMode ? 'shadow-gray-800/30' : 'shadow-green-200/50'
                             }`}>
                                 94% Accuracy
                             </div>
 
-                            <div className={`absolute -bottom-3 -left-3 glass-light rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium text-blue-700 shadow-xl ${
+                            <div className={`slide-in-left stagger-2 absolute -bottom-3 -left-3 glass-light rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium text-blue-700 shadow-xl ${
                                 darkMode ? 'shadow-gray-800/30' : 'shadow-blue-200/50'
                             }`}>
                                 2.3s Processing
                             </div>
 
-                            {/* Enhanced Background elements */}
                             <div className="absolute -z-10 top-10 right-10 w-32 sm:w-40 h-32 sm:h-40 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
                             <div className="absolute -z-10 bottom-10 left-10 w-24 sm:w-32 h-24 sm:h-32 bg-indigo-400/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
                         </div>

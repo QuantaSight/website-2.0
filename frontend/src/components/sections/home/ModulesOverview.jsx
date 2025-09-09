@@ -4,13 +4,13 @@ import { FileText, Database, Users, ArrowRight } from 'lucide-react';
 import { useTheme } from '../../../context/ThemeContext';
 
 // Professional ModuleCard with enhanced glassmorphism and shadows
-const ModuleCard = ({ title, description, icon, to, badge }) => {
+const ModuleCard = ({ title, description, icon, to, badge, index = 0 }) => {
     const { darkMode } = useTheme();
 
     return (
         <Link
             to={to}
-            className={`group block professional-card h-full min-h-[280px] sm:min-h-[320px] transition-all duration-300 hover:scale-105 ${
+            className={`scale-in stagger-${index} group block professional-card h-full min-h-[280px] sm:min-h-[320px] transition-all duration-300 hover:scale-105 ${
                 darkMode
                     ? 'glass-dark text-white hover:bg-gray-700/50 shadow-xl shadow-gray-900/25 hover:shadow-2xl hover:shadow-gray-900/40'
                     : 'glass-card text-gray-800 hover:bg-white/90 shadow-xl shadow-blue-100/60 hover:shadow-2xl hover:shadow-blue-200/70'
@@ -31,15 +31,6 @@ const ModuleCard = ({ title, description, icon, to, badge }) => {
                             className: `w-7 h-7 sm:w-8 sm:h-8 ${darkMode ? 'text-blue-400' : 'text-blue-600'}`
                         })}
                     </div>
-                    {/*{badge && (*/}
-                    {/*    <span className={`px-2 py-1 text-xs font-medium rounded-full shadow-lg transition-all duration-300 ${*/}
-                    {/*        darkMode*/}
-                    {/*            ? 'bg-green-500/20 text-green-400 shadow-green-500/30'*/}
-                    {/*            : 'bg-green-100 text-green-700 shadow-green-200/50'*/}
-                    {/*    }`}>*/}
-                    {/*        {badge}*/}
-                    {/*    </span>*/}
-                    {/*)}*/}
                 </div>
 
                 {/* Content */}
@@ -77,18 +68,18 @@ const ModulesOverview = ({ darkMode }) => {
         <section className={`py-12 sm:py-16 ${darkMode ? 'bg-gray-800' : 'bg-gradient-to-b from-white to-blue-50/30'}`}>
             <div className="main-container">
                 <div className="text-center mb-10 sm:mb-12">
-                    <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
+                    <div className={`slide-up inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
                         <Database className="w-3 h-3 mr-2" />
                         AI-Powered Modules
                     </div>
-                    <h2 className={`text-2xl font-bold mb-3 ${
+                    <h2 className={`slide-up stagger-1 text-2xl font-bold mb-3 ${
                         darkMode ? 'text-white' : 'text-gray-800'
                     }`}>
                         Comprehensive Research Suite
                     </h2>
-                    <p className={`text-base max-w-2xl mx-auto ${
+                    <p className={`slide-up stagger-2 text-base max-w-2xl mx-auto ${
                         darkMode ? 'text-gray-400' : 'text-gray-600'
                     }`}>
                         Integrated modules designed to streamline every aspect of pharmaceutical research and development
@@ -102,6 +93,7 @@ const ModulesOverview = ({ darkMode }) => {
                         icon={<FileText />}
                         to="/xtract"
                         badge="Core"
+                        index={0}
                     />
 
                     <ModuleCard
@@ -110,6 +102,7 @@ const ModulesOverview = ({ darkMode }) => {
                         icon={<Database />}
                         to="/atlas"
                         badge="Advanced"
+                        index={1}
                     />
 
                     <ModuleCard
@@ -118,11 +111,12 @@ const ModulesOverview = ({ darkMode }) => {
                         icon={<Users />}
                         to="/workroom"
                         badge="Pro"
+                        index={2}
                     />
                 </div>
 
                 {/* Integration note */}
-                <div className={`mt-10 sm:mt-12 p-5 sm:p-6 rounded-xl text-center transition-all duration-300 ${
+                <div className={`slide-in-right stagger-3 mt-10 sm:mt-12 p-5 sm:p-6 rounded-xl text-center transition-all duration-300 ${
                     darkMode
                         ? 'glass-dark shadow-xl shadow-gray-900/20'
                         : 'glass-light shadow-xl shadow-blue-100/40'

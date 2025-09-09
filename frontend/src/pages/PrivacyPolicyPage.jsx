@@ -1,12 +1,13 @@
 import React from 'react';
 import { Shield, Mail, Calendar, Lock, Eye, FileText, Users, Globe } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
-const PolicySection = ({ icon, title, children }) => {
+const PolicySection = ({ icon, title, children, index = 0 }) => {
     const { darkMode } = useTheme();
 
     return (
-        <div className={`professional-card mb-8 transition-all duration-300 p-6 sm:p-8 ${
+        <div className={`scale-in stagger-${index} professional-card mb-8 transition-all duration-300 p-6 sm:p-8 ${
             darkMode
                 ? 'glass-dark text-white shadow-xl shadow-gray-900/20'
                 : 'glass-card text-gray-800 shadow-xl shadow-blue-100/50'
@@ -36,7 +37,7 @@ const PolicySection = ({ icon, title, children }) => {
 
 const ContactCard = ({ darkMode }) => {
     return (
-        <div className={`professional-card p-6 sm:p-8 text-center transition-all duration-300 ${
+        <div className={`slide-in-right professional-card p-6 sm:p-8 text-center transition-all duration-300 ${
             darkMode
                 ? 'glass-dark shadow-xl shadow-gray-900/25'
                 : 'glass-light shadow-xl shadow-blue-100/60'
@@ -76,6 +77,9 @@ const ContactCard = ({ darkMode }) => {
 const PrivacyPolicyPage = () => {
     const { darkMode } = useTheme();
 
+    // Initialize scroll animations
+    useScrollAnimation();
+
     return (
         <div className={`min-h-screen ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-50/50 to-indigo-100/30'}`}>
             {/* Hero Section */}
@@ -83,25 +87,25 @@ const PrivacyPolicyPage = () => {
                 <div className="main-container">
                     <div className="text-center max-w-4xl mx-auto">
                         {/* Trust Badge */}
-                        <div className={`inline-flex items-center px-3 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
+                        <div className={`slide-up inline-flex items-center px-3 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
                             darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                         }`}>
                             <Shield className="w-3 h-3 mr-2" />
                             Data Protection & Privacy
                         </div>
 
-                        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                        <h1 className="slide-up stagger-1 text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
                                 Privacy Policy
                             </span>
                         </h1>
 
-                        <p className={`text-base lg:text-lg mb-8 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'} max-w-2xl mx-auto`}>
+                        <p className={`slide-up stagger-2 text-base lg:text-lg mb-8 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'} max-w-2xl mx-auto`}>
                             Your privacy matters to us. This policy explains how we collect, use, and protect your personal information.
                         </p>
 
                         {/* Policy Details */}
-                        <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 p-6 rounded-xl transition-all duration-300 ${
+                        <div className={`scale-in stagger-3 grid grid-cols-1 sm:grid-cols-3 gap-4 p-6 rounded-xl transition-all duration-300 ${
                             darkMode
                                 ? 'glass-dark shadow-xl shadow-gray-900/20'
                                 : 'glass-light shadow-xl shadow-blue-100/40'
@@ -129,13 +133,13 @@ const PrivacyPolicyPage = () => {
             {/* Policy Content */}
             <section className="py-12 sm:py-16">
                 <div className="main-container max-w-4xl">
-                    <PolicySection icon={<FileText />} title="1. Introduction">
+                    <PolicySection icon={<FileText />} title="1. Introduction" index={0}>
                         <p className="text-sm leading-relaxed">
                             This Privacy Policy outlines how we collect, use, and protect your personal information when you submit your data through our LinkedIn Lead Generation Ads or other lead forms. By providing your information, you agree to the terms of this Privacy Policy.
                         </p>
                     </PolicySection>
 
-                    <PolicySection icon={<Eye />} title="2. Information We Collect">
+                    <PolicySection icon={<Eye />} title="2. Information We Collect" index={1}>
                         <p className="text-sm leading-relaxed mb-4">
                             When you interact with our LinkedIn ads or fill out a lead form, we may collect the following information:
                         </p>
@@ -150,7 +154,7 @@ const PrivacyPolicyPage = () => {
                         </ul>
                     </PolicySection>
 
-                    <PolicySection icon={<Users />} title="3. How We Use Your Information">
+                    <PolicySection icon={<Users />} title="3. How We Use Your Information" index={2}>
                         <p className="text-sm leading-relaxed mb-4">
                             We use the collected information to:
                         </p>
@@ -163,7 +167,7 @@ const PrivacyPolicyPage = () => {
                         </ul>
                     </PolicySection>
 
-                    <PolicySection icon={<Globe />} title="4. Data Sharing and Disclosure">
+                    <PolicySection icon={<Globe />} title="4. Data Sharing and Disclosure" index={3}>
                         <p className="text-sm leading-relaxed mb-4">
                             We do not sell or rent your personal information. However, we may share your data with:
                         </p>
@@ -177,13 +181,13 @@ const PrivacyPolicyPage = () => {
                         </p>
                     </PolicySection>
 
-                    <PolicySection icon={<Lock />} title="5. Data Security">
+                    <PolicySection icon={<Lock />} title="5. Data Security" index={4}>
                         <p className="text-sm leading-relaxed">
                             We implement appropriate technical and organizational measures to protect your personal data from unauthorized access, disclosure, alteration, or destruction.
                         </p>
                     </PolicySection>
 
-                    <PolicySection icon={<Shield />} title="6. Your Data Rights">
+                    <PolicySection icon={<Shield />} title="6. Your Data Rights" index={5}>
                         <p className="text-sm leading-relaxed mb-4">
                             You have the right to:
                         </p>
@@ -198,19 +202,19 @@ const PrivacyPolicyPage = () => {
                         </p>
                     </PolicySection>
 
-                    <PolicySection icon={<Eye />} title="7. Cookies and Tracking">
+                    <PolicySection icon={<Eye />} title="7. Cookies and Tracking" index={6}>
                         <p className="text-sm leading-relaxed">
                             We may use cookies or LinkedIn Insight Tags to track ad performance and improve our campaigns. You can manage your cookie preferences through your browser settings or LinkedIn's ad settings.
                         </p>
                     </PolicySection>
 
-                    <PolicySection icon={<Calendar />} title="8. Updates to This Policy">
+                    <PolicySection icon={<Calendar />} title="8. Updates to This Policy" index={7}>
                         <p className="text-sm leading-relaxed">
                             We may update this Privacy Policy from time to time. Changes will be posted on this page with the updated effective date.
                         </p>
                     </PolicySection>
 
-                    <PolicySection icon={<Mail />} title="9. Contact Us">
+                    <PolicySection icon={<Mail />} title="9. Contact Us" index={8}>
                         <p className="text-sm leading-relaxed mb-4">
                             If you have any questions or concerns about this Privacy Policy or how your data is used, please contact us at:
                         </p>

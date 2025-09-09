@@ -5,20 +5,19 @@ const SearchCapabilities = ({ darkMode }) => {
     return (
         <section className={`py-16 lg:py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-b from-white to-gray-50/50'}`}>
             <div className="main-container">
-                {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
-                    <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
+                    <div className={`slide-up inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
                         <Search className="w-3 h-3 mr-2" />
                         Advanced Search
                     </div>
-                    <h2 className={`text-2xl font-bold mb-3 ${
+                    <h2 className={`slide-up stagger-1 text-2xl font-bold mb-3 ${
                         darkMode ? 'text-white' : 'text-gray-800'
                     }`}>
                         Precision search with powerful operators
                     </h2>
-                    <p className={`text-base max-w-2xl mx-auto ${
+                    <p className={`slide-up stagger-2 text-base max-w-2xl mx-auto ${
                         darkMode ? 'text-gray-400' : 'text-gray-600'
                     }`}>
                         Find exactly what you need with advanced Boolean operators, filtering, and field-specific searches across millions of documents
@@ -26,17 +25,16 @@ const SearchCapabilities = ({ darkMode }) => {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-                    {/* Left side - Features */}
                     <div className="space-y-3">
-                        {/* Boolean Operators Card */}
-                        <div className={`professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
+                        <div className={`scale-in professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
                             darkMode
                                 ? 'glass-dark shadow-gray-900/25 hover:shadow-gray-900/40'
                                 : 'glass-card shadow-blue-100/60 hover:shadow-blue-200/70'
                         }`} style={{
                             boxShadow: darkMode
                                 ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
-                                : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
+                                : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)',
+                            transitionDelay: '0s'
                         }}>
                             <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
                                 <div className={`p-3 rounded-xl shadow-lg transition-all duration-300 mb-3 sm:mb-0 ${
@@ -58,15 +56,15 @@ const SearchCapabilities = ({ darkMode }) => {
                             </ul>
                         </div>
 
-                        {/* Date Filtering Card */}
-                        <div className={`professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
+                        <div className={`scale-in stagger-1 professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
                             darkMode
                                 ? 'glass-dark shadow-gray-900/25 hover:shadow-gray-900/40'
                                 : 'glass-card shadow-blue-100/60 hover:shadow-blue-200/70'
                         }`} style={{
                             boxShadow: darkMode
                                 ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
-                                : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
+                                : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)',
+                            transitionDelay: '0.1s'
                         }}>
                             <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
                                 <div className={`p-3 rounded-xl shadow-lg transition-all duration-300 mb-3 sm:mb-0 ${
@@ -88,15 +86,15 @@ const SearchCapabilities = ({ darkMode }) => {
                             </ul>
                         </div>
 
-                        {/* Field-Specific Search Card */}
-                        <div className={`professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
+                        <div className={`scale-in stagger-2 professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
                             darkMode
                                 ? 'glass-dark shadow-gray-900/25 hover:shadow-gray-900/40'
                                 : 'glass-card shadow-blue-100/60 hover:shadow-blue-200/70'
                         }`} style={{
                             boxShadow: darkMode
                                 ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
-                                : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
+                                : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)',
+                            transitionDelay: '0.2s'
                         }}>
                             <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4">
                                 <div className={`p-3 rounded-xl shadow-lg transition-all duration-300 mb-3 sm:mb-0 ${
@@ -119,10 +117,8 @@ const SearchCapabilities = ({ darkMode }) => {
                         </div>
                     </div>
 
-                    {/* Right side - Search Examples */}
                     <div className="space-y-6">
-                        {/* Search Examples Card */}
-                        <div className={`professional-card p-6 sm:p-8 transition-all duration-300 shadow-xl hover:shadow-2xl ${
+                        <div className={`slide-in-right professional-card p-6 sm:p-8 transition-all duration-300 shadow-xl hover:shadow-2xl ${
                             darkMode
                                 ? 'glass-dark shadow-gray-900/25'
                                 : 'glass-card shadow-blue-100/60'
@@ -141,7 +137,6 @@ const SearchCapabilities = ({ darkMode }) => {
                             </div>
 
                             <div className="space-y-6">
-                                {/* Boolean Search Example */}
                                 <div>
                                     <div className={`text-xs font-medium mb-2 ${
                                         darkMode ? 'text-gray-300' : 'text-gray-600'
@@ -156,7 +151,6 @@ const SearchCapabilities = ({ darkMode }) => {
                                     </div>
                                 </div>
 
-                                {/* Field Search Example */}
                                 <div>
                                     <div className={`text-xs font-medium mb-2 ${
                                         darkMode ? 'text-gray-300' : 'text-gray-600'
@@ -171,7 +165,6 @@ const SearchCapabilities = ({ darkMode }) => {
                                     </div>
                                 </div>
 
-                                {/* Complex Query Example */}
                                 <div>
                                     <div className={`text-xs font-medium mb-2 ${
                                         darkMode ? 'text-gray-300' : 'text-gray-600'
@@ -187,20 +180,6 @@ const SearchCapabilities = ({ darkMode }) => {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Stats */}
-                            {/*<div className="mt-6 pt-6 border-t border-gray-200/20">*/}
-                            {/*    <div className="grid grid-cols-2 gap-4 text-center">*/}
-                            {/*        <div>*/}
-                            {/*            <div className="text-base sm:text-lg font-bold text-blue-600">2.3M+</div>*/}
-                            {/*            <div className="text-xs text-gray-500">Documents Indexed</div>*/}
-                            {/*        </div>*/}
-                            {/*        <div>*/}
-                            {/*            <div className="text-base sm:text-lg font-bold text-green-600">&lt;0.5s</div>*/}
-                            {/*            <div className="text-xs text-gray-500">Average Search Time</div>*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
                         </div>
                     </div>
                 </div>

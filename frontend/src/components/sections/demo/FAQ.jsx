@@ -30,18 +30,18 @@ const FAQ = ({ darkMode }) => {
             <div className="main-container">
                 {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
-                    <div className={`inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
+                    <div className={`slide-up inline-flex items-center px-3 py-1 glass-light rounded-full text-xs font-medium text-blue-700 mb-4 shadow-lg ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
                     }`}>
                         <HelpCircle className="w-3 h-3 mr-2" />
                         Demo FAQ
                     </div>
-                    <h2 className={`text-2xl font-bold mb-3 ${
+                    <h2 className={`slide-up stagger-1 text-2xl font-bold mb-3 ${
                         darkMode ? 'text-white' : 'text-gray-800'
                     }`}>
                         Frequently Asked Questions
                     </h2>
-                    <p className={`text-base max-w-2xl mx-auto ${
+                    <p className={`slide-up stagger-2 text-base max-w-2xl mx-auto ${
                         darkMode ? 'text-gray-400' : 'text-gray-600'
                     }`}>
                         Everything you need to know about the demo process
@@ -52,7 +52,7 @@ const FAQ = ({ darkMode }) => {
                     {faqs.map((faq, index) => {
                         const IconComponent = faq.icon;
                         return (
-                            <div key={index} className={`professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
+                            <div key={index} className={`scale-in stagger-${index} professional-card p-5 sm:p-6 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 ${
                                 darkMode
                                     ? 'glass-dark shadow-gray-900/25 hover:shadow-gray-900/40'
                                     : 'glass-card shadow-blue-100/60 hover:shadow-blue-200/70'

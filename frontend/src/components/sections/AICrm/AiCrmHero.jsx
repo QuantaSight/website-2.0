@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Zap, Shield, ArrowRight } from 'lucide-react';
+import { Users, Zap, ArrowRight } from 'lucide-react';
 
 const AiCrmHero = ({ darkMode }) => {
     return (
@@ -14,15 +14,14 @@ const AiCrmHero = ({ darkMode }) => {
             <div className="main-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                     <div className="lg:w-1/2 text-center lg:text-left">
-                        {/* Module badge */}
-                        <div className={`inline-flex items-center px-3 sm:px-4 py-2 rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
+                        <div className={`slide-up inline-flex items-center px-3 sm:px-4 py-2 rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg ${
                             darkMode ? 'bg-gray-800/50 backdrop-blur-sm shadow-gray-800/30' : 'bg-white/50 backdrop-blur-sm shadow-blue-100/50'
                         }`}>
                             <Users className="w-3 h-3 mr-2" />
                             AI CRM Module
                         </div>
 
-                        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                        <h1 className="slide-up stagger-1 text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
                                 AI CRM
                             </span>
@@ -32,14 +31,13 @@ const AiCrmHero = ({ darkMode }) => {
                             </span>
                         </h1>
 
-                        <p className={`text-sm sm:text-base lg:text-lg mb-8 leading-relaxed ${
+                        <p className={`slide-up stagger-2 text-sm sm:text-base lg:text-lg mb-8 leading-relaxed ${
                             darkMode ? 'text-gray-300' : 'text-gray-600'
                         } max-w-lg mx-auto lg:mx-0`}>
                             Integrate AI to track interactions with KOLs, companies, and medical affairs projects. Upload your data sheets and chat with intelligent insights for medical science queries.
                         </p>
 
-                        {/* Enhanced Key benefits */}
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                        <div className="scale-in stagger-3 grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                             <div className={`p-4 sm:p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ${
                                 darkMode
                                     ? 'bg-gray-800/50 backdrop-blur-sm shadow-gray-900/20'
@@ -60,7 +58,7 @@ const AiCrmHero = ({ darkMode }) => {
                             </div>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <div className="slide-up stagger-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <button
                                 className="inline-flex items-center justify-center px-4 sm:px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-sm font-medium rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5"
                                 style={{
@@ -75,8 +73,7 @@ const AiCrmHero = ({ darkMode }) => {
 
                     <div className="lg:w-1/2 flex justify-center">
                         <div className="relative w-full max-w-md">
-                            {/* Enhanced Main demo container */}
-                            <div className={`p-6 sm:p-8 transform hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl rounded-xl ${
+                            <div className={`slide-in-right p-6 sm:p-8 transform hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl rounded-xl ${
                                 darkMode
                                     ? 'bg-gray-800/50 backdrop-blur-sm shadow-gray-900/25'
                                     : 'bg-white/70 backdrop-blur-sm shadow-blue-100/60'
@@ -85,7 +82,6 @@ const AiCrmHero = ({ darkMode }) => {
                                     ? '0 12px 28px -8px rgba(0, 0, 0, 0.3), 0 8px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                                     : '0 12px 28px -8px rgba(59, 130, 246, 0.18), 0 8px 24px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.7)'
                             }}>
-                                {/* Mock interface */}
                                 <div className="space-y-4 sm:space-y-5">
                                     <div className="flex items-center justify-between">
                                         <div className={`text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'}`}>CRM Query</div>
@@ -118,20 +114,18 @@ const AiCrmHero = ({ darkMode }) => {
                                 </div>
                             </div>
 
-                            {/* Enhanced Floating stats */}
-                            <div className={`absolute -top-3 -right-3 rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium text-green-700 shadow-xl ${
+                            <div className={`slide-in-right stagger-1 absolute -top-3 -right-3 rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium text-green-700 shadow-xl ${
                                 darkMode ? 'bg-gray-800/50 backdrop-blur-sm shadow-gray-800/30' : 'bg-white/50 backdrop-blur-sm shadow-green-200/50'
                             }`}>
                                 500+ KOLs
                             </div>
 
-                            <div className={`absolute -bottom-3 -left-3 rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium text-blue-700 shadow-xl ${
+                            <div className={`slide-in-left stagger-2 absolute -bottom-3 -left-3 rounded-lg px-2 sm:px-3 py-1 sm:py-2 text-xs font-medium text-blue-700 shadow-xl ${
                                 darkMode ? 'bg-gray-800/50 backdrop-blur-sm shadow-gray-800/30' : 'bg-white/50 backdrop-blur-sm shadow-blue-200/50'
                             }`}>
                                 Real-time Updates
                             </div>
 
-                            {/* Enhanced Background elements */}
                             <div className="absolute -z-10 top-10 right-10 w-32 sm:w-40 h-32 sm:h-40 bg-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
                             <div className="absolute -z-10 bottom-10 left-10 w-24 sm:w-32 h-24 sm:h-32 bg-indigo-400/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
                         </div>
