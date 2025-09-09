@@ -265,7 +265,7 @@ const Header = ({ activeSection }) => {
                             <NavLink
                                 title="Login"
                                 icon={<LogIn size={14} />}
-                                to="https://quantasight.com"
+                                to="https://quantasight.com/web"
                                 external={true}
                             />
                         </nav>
@@ -351,7 +351,7 @@ const Header = ({ activeSection }) => {
                             <MobileNavLink
                                 title="Login"
                                 icon={<LogIn size={16} />}
-                                to="https://quantasight.com"
+                                to="https://quantasight.com/web"
                                 onClick={closeMobileMenu}
                                 external={true}
                             />
