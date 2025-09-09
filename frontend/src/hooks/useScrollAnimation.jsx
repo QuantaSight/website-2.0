@@ -33,6 +33,7 @@ const useScrollAnimation = () => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
+                        // Add show class when entering viewport
                         entry.target.classList.add('show');
 
                         // Handle staggered animations
@@ -50,6 +51,9 @@ const useScrollAnimation = () => {
                         if (entry.target.classList.contains('counter-animate')) {
                             animateCounters(entry.target);
                         }
+                    } else {
+                        // Remove classes when leaving viewport to allow re-animation
+                        entry.target.classList.remove('show', 'animated');
                     }
                 });
             },
