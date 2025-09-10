@@ -1,7 +1,7 @@
-// frontend/vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+
 // localhost
 // export default defineConfig({
 //     plugins: [
@@ -12,6 +12,9 @@ import tailwindcss from '@tailwindcss/vite'
 //         host: '0.0.0.0',
 //         port: 5173,
 //         allowedHosts: ['quantasight.com'],
+//         hmr: {
+//             overlay: false
+//         }
 //     }
 // })
 
@@ -25,6 +28,9 @@ export default defineConfig({
         host: '0.0.0.0',
         port: 5173,
         allowedHosts: ['quantasight.com'],
+        hmr: {
+            overlay: false  // Disables error overlay for sporadic URI malformed errors
+        },
         proxy: {
             '/api': {
                 target: 'http://localhost:3000',
