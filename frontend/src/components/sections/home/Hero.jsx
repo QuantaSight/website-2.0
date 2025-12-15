@@ -71,7 +71,7 @@ const Hero = ({ darkMode }) => {
 
             {/* Content Layer */}
             <div className="main-container relative z-10 py-12 md:py-16 lg:py-20 pointer-events-none">
-                <div className="max-w-4xl mx-auto text-center">
+                <div className="max-w-5xl mx-auto text-center">
                     {/* Trust Badge */}
                     <div className={`slide-up inline-flex items-center px-3 py-2 glass-light rounded-full text-xs font-medium text-blue-700 mb-6 shadow-lg pointer-events-auto ${
                         darkMode ? 'shadow-gray-800/30' : 'shadow-blue-100/50'
