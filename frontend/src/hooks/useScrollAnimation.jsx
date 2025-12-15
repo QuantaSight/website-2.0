@@ -38,11 +38,11 @@ const useScrollAnimation = () => {
 
                         // Handle staggered animations
                         if (entry.target.classList.contains('stagger-1')) {
-                            setTimeout(() => entry.target.classList.add('animated'), 100);
+                            setTimeout(() => entry.target.classList.add('animated'), 50);
                         } else if (entry.target.classList.contains('stagger-2')) {
-                            setTimeout(() => entry.target.classList.add('animated'), 200);
+                            setTimeout(() => entry.target.classList.add('animated'), 100);
                         } else if (entry.target.classList.contains('stagger-3')) {
-                            setTimeout(() => entry.target.classList.add('animated'), 300);
+                            setTimeout(() => entry.target.classList.add('animated'), 150);
                         } else {
                             entry.target.classList.add('animated');
                         }
@@ -80,7 +80,7 @@ const useScrollAnimation = () => {
             ].join(', '));
 
             animateElements.forEach(el => observer.observe(el));
-        }, 100);
+        }, 50);
 
         // Counter animation function
         const animateCounters = (container) => {
@@ -88,7 +88,7 @@ const useScrollAnimation = () => {
 
             counters.forEach(counter => {
                 const target = parseInt(counter.getAttribute('data-count'));
-                const duration = parseInt(counter.getAttribute('data-duration')) || 2000;
+                const duration = parseInt(counter.getAttribute('data-duration')) || 1000;
                 const start = 0;
                 const startTime = performance.now();
 

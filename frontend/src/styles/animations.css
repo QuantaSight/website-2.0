@@ -4,7 +4,7 @@
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(50px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animate-on-scroll.animated {
@@ -15,7 +15,7 @@
 /* Fade animations */
 .fade-in {
     opacity: 0;
-    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in.show {
@@ -26,7 +26,7 @@
 .slide-up {
     opacity: 0;
     transform: translateY(60px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slide-up.show {
@@ -38,7 +38,7 @@
 .slide-in-right {
     opacity: 0;
     transform: translateX(60px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slide-in-right.show {
@@ -50,7 +50,7 @@
 .slide-in-left {
     opacity: 0;
     transform: translateX(-60px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slide-in-left.show {
@@ -62,7 +62,7 @@
 .scale-in {
     opacity: 0;
     transform: scale(0.8);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scale-in.show {
@@ -72,27 +72,27 @@
 
 /* Stagger animations for groups */
 .stagger-1 {
-    transition-delay: 0.1s;
+    transition-delay: 0.05s;
 }
 
 .stagger-2 {
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 .stagger-3 {
-    transition-delay: 0.3s;
+    transition-delay: 0.15s;
 }
 
 .stagger-4 {
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
 }
 
 .stagger-5 {
-    transition-delay: 0.5s;
+    transition-delay: 0.25s;
 }
 
 .stagger-6 {
-    transition-delay: 0.6s;
+    transition-delay: 0.3s;
 }
 
 /* Floating animations */
@@ -136,7 +136,7 @@
 .text-reveal {
     opacity: 0;
     transform: translateY(30px);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-reveal.show {
@@ -149,7 +149,7 @@
     opacity: 0;
     filter: blur(10px);
     transform: translateY(40px);
-    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .blur-to-focus.show {
@@ -162,7 +162,7 @@
 .rotate-in {
     opacity: 0;
     transform: rotate(-10deg) scale(0.8);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .rotate-in.show {
@@ -174,7 +174,7 @@
 .counter-animate {
     opacity: 0;
     transform: scale(0.5);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .counter-animate.show {
@@ -186,43 +186,43 @@
 .progressive-reveal > * {
     opacity: 0;
     transform: translateX(-30px);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .progressive-reveal.show > *:nth-child(1) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.1s;
+    transition-delay: 0.05s;
 }
 
 .progressive-reveal.show > *:nth-child(2) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.2s;
+    transition-delay: 0.1s;
 }
 
 .progressive-reveal.show > *:nth-child(3) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.3s;
+    transition-delay: 0.15s;
 }
 
 .progressive-reveal.show > *:nth-child(4) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.4s;
+    transition-delay: 0.2s;
 }
 
 .progressive-reveal.show > *:nth-child(5) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.5s;
+    transition-delay: 0.25s;
 }
 
 .progressive-reveal.show > *:nth-child(6) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.6s;
+    transition-delay: 0.3s;
 }
 
 /* Smooth scroll behavior */
