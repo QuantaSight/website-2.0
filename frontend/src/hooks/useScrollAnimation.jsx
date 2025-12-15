@@ -33,38 +33,44 @@ const useScrollAnimation = () => {
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // Add show class when entering viewport
-                        entry.target.classList.add('show');
+                        // Only animate if not already animated
+                        if (!entry.target.classList.contains('animated')) {
+                            // Use requestAnimationFrame for smoother animations
+                            requestAnimationFrame(() => {
+                                // Add show class when entering viewport
+                                entry.target.classList.add('show');
 
-                        // Handle staggered animations
-                        if (entry.target.classList.contains('stagger-1')) {
-                            setTimeout(() => entry.target.classList.add('animated'), 50);
-                        } else if (entry.target.classList.contains('stagger-2')) {
-                            setTimeout(() => entry.target.classList.add('animated'), 100);
-                        } else if (entry.target.classList.contains('stagger-3')) {
-                            setTimeout(() => entry.target.classList.add('animated'), 150);
-                        } else {
-                            entry.target.classList.add('animated');
-                        }
+                                // Handle staggered animations - using immediate animation for faster response
+                                if (entry.target.classList.contains('stagger-1')) {
+                                    entry.target.classList.add('animated');
+                                } else if (entry.target.classList.contains('stagger-2')) {
+                                    setTimeout(() => entry.target.classList.add('animated'), 50);
+                                } else if (entry.target.classList.contains('stagger-3')) {
+                                    setTimeout(() => entry.target.classList.add('animated'), 100);
+                                } else {
+                                    entry.target.classList.add('animated');
+                                }
 
-                        // Handle counter animations
-                        if (entry.target.classList.contains('counter-animate')) {
-                            animateCounters(entry.target);
+                                // Handle counter animations
+                                if (entry.target.classList.contains('counter-animate')) {
+                                    animateCounters(entry.target);
+                                }
+                            });
+
+                            // Stop observing this element after animation
+                            observer.unobserve(entry.target);
                         }
-                    } else {
-                        // Remove classes when leaving viewport to allow re-animation
-                        entry.target.classList.remove('show', 'animated');
                     }
                 });
             },
             {
-                threshold: 0.1,
-                rootMargin: '-50px 0px -50px 0px'
+                threshold: 0.15,
+                rootMargin: '0px 0px -100px 0px'
             }
         );
 
-        // Observe all animation elements after a short delay
-        setTimeout(() => {
+        // Observe all animation elements after initial render
+        requestAnimationFrame(() => {
             const animateElements = document.querySelectorAll([
                 '.animate-on-scroll',
                 '.fade-in',
@@ -80,7 +86,7 @@ const useScrollAnimation = () => {
             ].join(', '));
 
             animateElements.forEach(el => observer.observe(el));
-        }, 50);
+        });
 
         // Counter animation function
         const animateCounters = (container) => {
@@ -88,7 +94,7 @@ const useScrollAnimation = () => {
 
             counters.forEach(counter => {
                 const target = parseInt(counter.getAttribute('data-count'));
-                const duration = parseInt(counter.getAttribute('data-duration')) || 1000;
+                const duration = parseInt(counter.getAttribute('data-duration')) || 800;
                 const start = 0;
                 const startTime = performance.now();
 

@@ -3,8 +3,10 @@
 /* Base animation states */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(15px);
+    transition: opacity 0.4s ease-out,
+                transform 0.4s ease-out;
+    will-change: opacity, transform;
 }
 
 .animate-on-scroll.animated {
@@ -15,7 +17,8 @@
 /* Fade animations */
 .fade-in {
     opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.4s ease-out;
+    will-change: opacity;
 }
 
 .fade-in.show {
@@ -25,8 +28,10 @@
 /* Slide up animations */
 .slide-up {
     opacity: 0;
-    transform: translateY(60px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(15px);
+    transition: opacity 0.4s ease-out,
+                transform 0.4s ease-out;
+    will-change: opacity, transform;
 }
 
 .slide-up.show {
@@ -37,8 +42,10 @@
 /* Slide in from right */
 .slide-in-right {
     opacity: 0;
-    transform: translateX(60px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(15px);
+    transition: opacity 0.4s ease-out,
+                transform 0.4s ease-out;
+    will-change: opacity, transform;
 }
 
 .slide-in-right.show {
@@ -49,8 +56,10 @@
 /* Slide in from left */
 .slide-in-left {
     opacity: 0;
-    transform: translateX(-60px);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-15px);
+    transition: opacity 0.4s ease-out,
+                transform 0.4s ease-out;
+    will-change: opacity, transform;
 }
 
 .slide-in-left.show {
@@ -61,8 +70,10 @@
 /* Scale animations */
 .scale-in {
     opacity: 0;
-    transform: scale(0.8);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.98);
+    transition: opacity 0.4s ease-out,
+                transform 0.4s ease-out;
+    will-change: opacity, transform;
 }
 
 .scale-in.show {
@@ -72,27 +83,27 @@
 
 /* Stagger animations for groups */
 .stagger-1 {
-    transition-delay: 0.05s;
+    transition-delay: 0s;
 }
 
 .stagger-2 {
-    transition-delay: 0.1s;
+    transition-delay: 0.05s;
 }
 
 .stagger-3 {
-    transition-delay: 0.15s;
+    transition-delay: 0.1s;
 }
 
 .stagger-4 {
-    transition-delay: 0.2s;
+    transition-delay: 0.15s;
 }
 
 .stagger-5 {
-    transition-delay: 0.25s;
+    transition-delay: 0.2s;
 }
 
 .stagger-6 {
-    transition-delay: 0.3s;
+    transition-delay: 0.25s;
 }
 
 /* Floating animations */
@@ -135,8 +146,10 @@
 /* Text reveal animations */
 .text-reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-out,
+                transform 0.4s ease-out;
+    will-change: opacity, transform;
 }
 
 .text-reveal.show {
@@ -147,9 +160,12 @@
 /* Blur to focus animations */
 .blur-to-focus {
     opacity: 0;
-    filter: blur(10px);
-    transform: translateY(40px);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: blur(3px);
+    transform: translateY(10px);
+    transition: opacity 0.4s ease-out,
+                filter 0.4s ease-out,
+                transform 0.4s ease-out;
+    will-change: opacity, filter, transform;
 }
 
 .blur-to-focus.show {
@@ -161,8 +177,10 @@
 /* Rotate in animations */
 .rotate-in {
     opacity: 0;
-    transform: rotate(-10deg) scale(0.8);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotate(-3deg) scale(0.98);
+    transition: opacity 0.4s ease-out,
+                transform 0.4s ease-out;
+    will-change: opacity, transform;
 }
 
 .rotate-in.show {
@@ -173,8 +191,10 @@
 /* Counter animations */
 .counter-animate {
     opacity: 0;
-    transform: scale(0.5);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.98);
+    transition: opacity 0.4s ease-out,
+                transform 0.4s ease-out;
+    will-change: opacity, transform;
 }
 
 .counter-animate.show {
@@ -185,44 +205,46 @@
 /* Progressive reveal for lists */
 .progressive-reveal > * {
     opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-10px);
+    transition: opacity 0.3s ease-out,
+                transform 0.3s ease-out;
+    will-change: opacity, transform;
 }
 
 .progressive-reveal.show > *:nth-child(1) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.05s;
+    transition-delay: 0s;
 }
 
 .progressive-reveal.show > *:nth-child(2) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.1s;
+    transition-delay: 0.05s;
 }
 
 .progressive-reveal.show > *:nth-child(3) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.15s;
+    transition-delay: 0.1s;
 }
 
 .progressive-reveal.show > *:nth-child(4) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.2s;
+    transition-delay: 0.15s;
 }
 
 .progressive-reveal.show > *:nth-child(5) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.25s;
+    transition-delay: 0.2s;
 }
 
 .progressive-reveal.show > *:nth-child(6) {
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 0.3s;
+    transition-delay: 0.25s;
 }
 
 /* Smooth scroll behavior */
